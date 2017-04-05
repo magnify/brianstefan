@@ -58,14 +58,23 @@
       margin-bottom: 20px;
     }
 
+    a {
+      display: block;
+      font-size: 20px;
+    }
+
 		a, a:link, a:visited, a:hover, a:active {
-			color: #fff;
+			color: #161616;
       text-decoration: underline;
 		}
 
 		a:hover {
       text-decoration: none;
 		}
+
+    span {
+      display: none;
+    }
 
     @media only screen and (min-width: 481px) {
       body {
@@ -90,6 +99,11 @@
 
       a, a:link, a:visited, a:hover, a:active {
         color: #216165;
+        display: inline;
+      }
+
+      span {
+        display: inline;
       }
     }
 
@@ -101,8 +115,8 @@
       <img src="logo.svg" alt="Brian Stefan Jensen">
       <h1>UX / Design / Frontend Udvikling</h1>
       <h2>Jeg designer digitale systemer, brugeroplevelser og laver frontend udvikling.</h2>
-      <a href="mailto:hej@brianstefan.dk" title="Sig hej">hej@brianstefan.dk</a> /
-      <a href="tel:004520917720" title="Sig hej">+45 20 91 77 20</a> /
+      <a href="mailto:hej@brianstefan.dk" title="Sig hej">hej@brianstefan.dk</a> <span>/</span>
+      <a href="tel:004520917720" title="Sig hej">+45 20 91 77 20</a> <span>/</span>
       <a href="/brian-stefan-jensen-cv.pdf" title="CV">CV</a>
     </article>
   </section>
