@@ -16,38 +16,50 @@
     body {
       align-content: stretch;
       align-items: center;
-      background-color: #fffded;
+      background-color: ;
       box-sizing: border-box;
       color: #161616;
       display: flex;
       justify-content: center;
       margin: 0;
-      height: 100%;
-      padding: 20px;
+      min-height: 100%;
       position: relative;
     }
 
-    section {
+    .main {
       align-self: stretch;
       background: url('background.jpg') no-repeat;
       background-size: cover;
+      background-attachment: fixed;
+      border: 20px solid #fffded;
       display: flex;
-      padding: 35px;
+      min-height: 100%;
       width: 100%;
     }
 
     article {
       align-self: center;
+      display: flex;
+      flex-direction: column;
       font-display: swap;
       font-family: "Bitter", "Georgia";
       font-size: 25px;
-      margin: auto;
+      padding: 20px;
       text-align: center;
+    }
+    
+    .content {
+      position: relative;
+      top: 60px;
     }
 
     img {
+      align-self: center;
       height: 70px;
+      margin: auto;
       max-width: 70px;
+      position: fixed;
+      top: 50px;
     }
 
     h1 {
@@ -81,10 +93,6 @@
     }
 
     @media only screen and (min-width: 481px) {
-      body {
-        padding: 35px;
-      }
-
       img {
         position: absolute;
         left: 70px;
@@ -118,14 +126,21 @@
   </style>
 </head>
 <body>
-  <section>
+  <section class="main">
     <article>
       <img src="logo.svg" alt="Brian Stefan Jensen">
-      <h1>Frontend Arkitekt / Agile / UX / Design / Rådgivning</h1>
-      <h2>Design og udvikling af digitale systemer med fokus på gode brugeroplevelser og sund systemarkitektur.</h2>
-      <a href="mailto:hej@brianstefan.dk" title="Sig hej">hej@brianstefan.dk</a> <span>/</span>
-      <a href="tel:004520917720" title="Sig hej">+45 20 91 77 20</a> <span>/</span>
-      <a href="/brian-stefan-jensen-cv.pdf" title="CV">CV</a>
+      <section class="content">
+          <h1>Passioneret nørd og Frontend Arkitekt</h1>
+          <h2>Jeg er vild med at snakke frontend udvikling, performance, designsystemer, agile, CI/CD, brugervenlighed og hvordan man tester og leverer webløsninger af høj kvalitet.</h2>
+          <aside>
+            <p>Til daglig er jeg QA Manager ved Novicell, så skal du have lavet forretning online, så er jeg altid åben for en snak over en kop god kaffe.</p>
+          </aside>
+          <aside>
+            <a href="mailto:hej@brianstefan.dk" title="Sig hej">hej@brianstefan.dk</a> <span>/</span>
+            <a href="tel:004520917720" title="Sig hej">+45 20 91 77 20</a> <span>/</span>
+            <a href="/brian-stefan-jensen-cv.pdf" title="CV">CV</a>  
+          </aside>
+      </section>
     </article>
   </section>
 </body>
@@ -138,5 +153,19 @@
 
   ga('create', 'UA-96894412-1', 'auto');
   ga('send', 'pageview');
+</script>
+<script>
+  window.onscroll = function() {
+    var target = document.querySelector('h1');
+
+    var height = window.innerHeight;
+
+    var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+    // Change this if you want it to fade faster
+    height = height / 5;
+
+    target.style.opacity = (height - scrollTop) / height;
+  };
 </script>
 </html>
