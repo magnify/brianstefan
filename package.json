@@ -19,7 +19,8 @@
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "npm": "^6.4.1",
-    "nuxt": "^2.1.0"
+    "nuxt": "^2.1.0",
+    "vue-burger-menu": "^1.0.7"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

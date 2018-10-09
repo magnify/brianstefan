@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Slide/>
     <h1>Home</h1>
     <navigation/>
     <ul>
@@ -11,11 +12,13 @@
 <script>
 import Vue from 'vue'
 import Navigation from '~/components/Navigation.vue'
+import Slide from '~/components/Slide.vue'
 import axios from 'axios'
 
 export default {
   components: {
-    Navigation
+    Navigation,
+    Slide
   },
 
   async asyncData ({ params }) {
