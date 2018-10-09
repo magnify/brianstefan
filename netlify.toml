@@ -1,4 +1,4 @@
 [build]
   # This is the directory that you are publishing from (relative to root of your repo)
   publish = "dist"
-  command = "npm run generate"
+  command = "npm run build && npm run generate"
