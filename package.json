@@ -10,10 +10,6 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
-  "engines": {
-    "node": "8.11.x",
-    "npm": "5.8.x"
-  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.3",
     "axios": "^0.18.0",
