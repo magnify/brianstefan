@@ -1,8 +1,6 @@
 <template>
   <div>
-    <Slide/>
     <h1>About</h1>
-    <navigation/>
     <ul>
       <li v-for="(pokemon, index) in pokemons" :key="pokemon.index">{{ pokemon.name }}</li>
     </ul>
@@ -11,14 +9,10 @@
 
 <script>
 import Vue from 'vue'
-import Navigation from '~/components/Navigation.vue'
-import Slide from '~/components/Slide.vue'
 import axios from 'axios'
 
 export default {
   components: {
-    Navigation,
-    Slide
   },
 
   async asyncData ({ params }) {

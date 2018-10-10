@@ -1,8 +1,22 @@
 <template>
   <div>
+    <MobileNavigation/>
+    <navigation/>
     <nuxt/>
   </div>
 </template>
+
+<script>
+  import Navigation from '~/components/Navigation.vue'
+  import MobileNavigation from '~/components/MobileNavigation.vue'
+
+  export default {
+    components: {
+      Navigation,
+      MobileNavigation
+    },
+  }
+</script>
 
 <style>
 html {
