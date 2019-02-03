@@ -14,9 +14,9 @@
     }
 
     body {
-      background-color: #fffded;
+      background-color: #00072B;
       box-sizing: border-box;
-      color: #161616;
+      color: #fff;
       display: flex;
       font-family: "Bitter", "Georgia";
       min-height: 100%;
@@ -27,13 +27,21 @@
     }
 
     .main {
-      background: url('background.jpg') no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
+      background: url('background.png') no-repeat;
+      background-size: 150%;
+      background-position-y: -75%;
+      background-position-x: 25%;
       display: flex;
-      margin: 25px;
       overflow: auto;
       width: 100%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .main {
+        background-size: 125%;
+        background-position-y: 55%;
+        background-position-x: 30%;
+      }
     }
 
     .content {
@@ -70,35 +78,42 @@
       }
     }
 
+    @media only screen and (min-width: 1024px) {
+      header {
+          margin-left: auto;
+          margin-right: auto;
+          width: 1000px;
+      }
+    }
+
     .headline {
       font-size: 30px;
+      margin-top: 30px;
       margin-bottom: 0;
-      margin-top: 25px;
-      text-align: center;
     }
 
     @media only screen and (min-width: 1024px) {
       .headline {
-        font-size: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1000px;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-left: -35px;
+        margin-right: 35px;
+        width: calc(100% - 70px);
       }
     }
 
     .lead {
       font-size: 20px;
       margin-bottom: 0;
-      margin-top: 25px;
-      text-align: center;
+      margin-top: 60px;
     }
 
     @media only screen and (min-width: 1024px) {
       .lead {
         font-size: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1000px;
+        margin-left: 35px;
+        margin-right: 35px;
+        width: calc(100% - 70px);
       }
     }
 
@@ -115,51 +130,91 @@
 
     .about,
     .contact {
-      background-color: rgba(255, 255, 255, .25);
-      border-radius: 25px;
       font-size: 18px;
       margin-top: 50px;
-      padding: 25px;
+      text-align: left;
     }
 
     @media only screen and (min-width: 1024px) {
       .about,
       .contact {
-        font-size: 24px;
-        margin-left: 25px;
-        margin-right: 25px;
-        width: calc(50% - 50px);
+        font-size: 22px;
+        margin-left: 35px;
+        margin-right: 35px;
+        width: calc(50% - 70px);
       }
+    }    
+
+    .info--header {
+      font-size: 30px;
+      padding-left: 120px;
+      position: relative;
+      text-align: left;
     }
 
-    .contact--link {
-      display: block;
+    .info--header:before {
+        background-color: #ffcd21;
+        top: 24px;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        transition: width .5s;
+        width: 100px;
     }
 
     a, a:link, a:visited, a:hover, a:active {
-      color: #216165;
-      text-decoration: underline;
+      color: #ffcd21;
+      position: relative;
+      text-decoration: none;
     }
+
+    a:after {
+        background-color: #ffcd21;
+        bottom: -6px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transition: width .5s;
+        width: 35px;
+    }    
 
     a:hover {
       text-decoration: none;
     }
 
+    a:hover:after,
+    a:focus:after {
+      width: 100%;
+    }  
   </style>
 </head>
 <body>
   <section class="main js-reveal-container">
     <div class="content">
       <img src="logo.svg" alt="Brian Stefan Jensen" class="logo">
-      <h1 class="headline">Passioneret nørd og Frontend Arkitekt</h1>
-      <p class="lead">Jeg er vild med at snakke frontend udvikling, performance, designsystemer, agile, CI/CD, brugervenlighed og hvordan man tester og leverer webløsninger af høj kvalitet.</p>
+      <header>
+        <h1 class="headline">
+          UX Designer,<br>
+          Frontend Developer &amp;<br>
+          Technical Architect.
+        </h1>
+        <p class="lead">Bridging the gap between design and development, delivering high quality solutions.</p>
+      </header>
       <div class="info">
         <aside class="about">
-          Til daglig er jeg ansvarlig for <a href="#" title="Novicell QA">Novicells QA afdeling</a>, så skal du have lavet god kvalitets <a href="#" title="Novicell - Forretning Online">forretning online</a>, så er jeg altid åben for en snak over en kop kaffe.
+          <h3 class="info--header">Work</h3>
+          <p>I am QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online">Novicell</a> in Aarhus.</p>
+          <p>If you need help with your next project, let's get in touch.</p>
+          <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="contact--link">bsj@novicell.dk</a></p>
         </aside>
         <aside class="contact">
-          <a href="mailto:hej@brianstefan.dk" title="Sig hej" class="contact--link">hej@brianstefan.dk</a>
-          <a href="tel:004520917720" title="Sig hej" class="contact--link">+45 20 91 77 20</a>
+          <h3 class="info--header">Contact</h3>
+          <p>Wanna grap a coffee? Feel free to reach out!</p>
+          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="contact--link">hej@brianstefan.dk</a></p>
+          <p>Phone: <a href="tel:004520917720" title="Say hi" class="contact--link">+45 20 91 77 20</a></p>
+          <p>LinkedIn: <a href="www.linkedin.com/in/brianstefanjensen">brianstefanjensen</a></p>
         </aside>
       </div>
     </div>
@@ -175,6 +230,12 @@
   ga('create', 'UA-96894412-1', 'auto');
   ga('send', 'pageview');
 </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var headlineHidden = document.querySelector('.js-headline-is-hidden');
+      headlineHidden.classList.remove('headline--hidden');
+    });
+  </script>
 <script src="//unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.js"></script>
 <script>
   ScrollReveal({
