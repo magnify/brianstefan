@@ -196,12 +196,12 @@
       right: 0;
       bottom: 0;
       left: 0;
-      opacity: .25;
+      opacity: .1;
     }
   </style>
 </head>
 <body>
-  <div class="test"></div>
+  <div class="particles"></div>
   <section class="main js-reveal-container">
     <div class="content">
       <img src="logo.svg" alt="Brian Stefan Jensen" class="logo">
@@ -260,7 +260,7 @@
   ScrollReveal().reveal('.contact', { delay: Math.random() * 1000, scale: Math.random() });
 
   // Credit: Marco Dell'Anna, https://codepen.io/collection/nZpPbz/4/
-  var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var max_particles = 300;
+  var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var max_particles = 75;
   var particles = [];
   var frequency = 1000;
   var init_num = max_particles;
@@ -278,7 +278,7 @@
   var tela = document.createElement('canvas');
   tela.width = $(window).width();
   tela.height = $(window).height();
-  $(".test").append(tela);
+  $(".particles").append(tela);
 
   var canvas = tela.getContext('2d');var
 
@@ -405,7 +405,7 @@
         canvas.beginPath();
         canvas.moveTo(box1.x, box1.y);
         canvas.lineTo(box2.x, box2.y);
-        canvas.lineWidth = 0.45;
+        canvas.lineWidth = 2.0;
         canvas.strokeStyle = "#a8bce7";
         canvas.stroke();
         canvas.closePath();
