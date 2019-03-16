@@ -128,15 +128,30 @@
         position: relative;
       }
 
-      .atomic-icon {
-        background: url('assets/atomic.svg') no-repeat;
+      .atomic-icon,
+      .performance-icon,
+      .rocket-icon {
         content: "";
         height: 400px;
-        left: -80px;
         opacity: .05;
         position: absolute;
         top: -80px;
         width: 400px;
+      }
+
+      .atomic-icon {
+        background: url('assets/atomic.svg') no-repeat;
+        left: -80px;
+      }
+
+      .performance-icon {
+        background: url('assets/performance.svg') no-repeat;
+        right: -80px;
+      }
+
+      .rocket-icon {
+        background: url('assets/rocket.svg') no-repeat;
+        left: -80px;
       }
 
       .container + .container {
@@ -303,6 +318,7 @@
         </aside>
       </div>
       <div class="container">
+        <div class="performance-icon"></div>
         <aside class="box-floated">
           <h3 class="box--header">Frontend Performance</h3>
           <p>Performance is one of the big buzzwords in 2019. And for <a href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html" title="Using page speed in mobile search ranking">good reason</a>. I have performed several performance checks, made performance budgets and setup frontend performance monitoring. If you need some sparring or have a site that needs a performance check drop me a line.</p>
@@ -311,6 +327,7 @@
         </aside>
       </div>      
       <div class="container">
+        <div class="rocket-icon"></div>
         <aside class="box">
           <h3 class="box--header">PWA, SPA & static sites</h3>
           <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I am following close, and I think that, in the future we will see apps and web melting together.</p>
