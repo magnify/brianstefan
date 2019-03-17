@@ -253,20 +253,25 @@
 
     .box-link, .box-link:link, .box-link:visited, .box-link:hover, .box-link:active {
       color: #a8bce7;
-      margin-left: 90px;
       position: relative;
       text-decoration: none;
-    }
+    }    
 
-    .box-link:before {
-        background: 100% url('assets/arrow-right.svg') no-repeat;
-        top: 6px;
-        content: "";
-        height: 18px;
-        left: -90px;
-        opacity: .75;
-        position: absolute;
-        width: 59px;
+    @media only screen and (min-width: 700px) {
+      .box-link {
+        margin-left: 90px;
+      }
+
+      .box-link:before {
+          background: 100% url('assets/arrow-right.svg') no-repeat;
+          top: 6px;
+          content: "";
+          height: 18px;
+          left: -90px;
+          opacity: .75;
+          position: absolute;
+          width: 59px;
+      }
     }
 
     .link, .link:link, .link:visited, .link:hover, .link:active {
@@ -367,7 +372,7 @@
         <div class="rocket-icon"></div>
         <aside class="box">
           <h3 class="box--header">PWA, SPA & static sites</h3>
-          <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I follow close,ly and I think that in the future, we will see apps and web melting together.</p>
+          <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I follow closely, and I think that in the future, we will see apps and web melting together.</p>
           <p>I have been involved with SPA and headless solutions for the last couple of years and dabbled a bit with Vue.js and Nuxt. Along with static sites and services like Netlify it surely is exciting times!<p>
           <p>Make sure to check <a href="https://www.netlify.com/" title="Netlify" class="link">Netlify</a> out!</p>
         </aside>
