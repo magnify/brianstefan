@@ -32,6 +32,7 @@
       background-position-y: -75%;
       background-position-x: 25%;
       display: flex;
+      flex-direction: column;
       overflow: auto;
       width: 100%;
     }
@@ -249,14 +250,33 @@
       text-align: center;
     }
 
-    a, a:link, a:visited, a:hover, a:active {
+
+    .box-link, .box-link:link, .box-link:visited, .box-link:hover, .box-link:active {
+      color: #a8bce7;
+      margin-left: 90px;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .box-link:before {
+        background: 100% url('assets/arrow-right.svg') no-repeat;
+        top: 6px;
+        content: "";
+        height: 18px;
+        left: -90px;
+        opacity: .75;
+        position: absolute;
+        width: 59px;
+    }
+
+    .link, .link:link, .link:visited, .link:hover, .link:active {
       color: #ffcd21;
       position: relative;
       text-decoration: none;
     }
 
-    a:after {
-        background-color: #ffcd21;
+    .link:after,
+    .box-link:after {
         bottom: -6px;
         content: "";
         height: 2px;
@@ -266,13 +286,30 @@
         width: 35px;
     }
 
-    a:hover {
-      text-decoration: none;
+    .link:after {
+        background-color: #ffcd21;
     }
 
-    a:hover:after,
-    a:focus:after {
+    .box-link:after {
+        background-color: #a8bce7;
+    }
+
+    .link:hover:after,
+    .box-link:hover:after,
+    .box-link:focus:after,
+    .link:focus:after {
       width: 100%;
+    }
+
+    .credit {
+      font-size: 14px;
+      margin-top: 100px;
+      opacity: .25;
+      text-align: center;
+    }
+
+    .credit:hover {
+      opacity: .75;  
     }
   </style>
 </head>
@@ -292,18 +329,18 @@
         <aside class="about">
           <h3 class="box--header">Work</h3>
           <div class="box--inner">
-            <p>I am a QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online">Novicell</a> in Aarhus.</p>
+            <p>I am a QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online" class="link">Novicell</a> in Aarhus.</p>
             <p>If you need help with your next project, let's get in touch.</p>
-            <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="contact--link">bsj@novicell.dk</a></p>
+            <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="link">bsj@novicell.dk</a></p>
           </div>
         </aside>
         <aside class="contact">
           <h3 class="box--header">Contact</h3>
           <div class="box--inner">
             <p>Wanna grab a coffee? Feel free to reach out!</p>
-            <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="contact--link">hej@brianstefan.dk</a></p>
-            <p>Phone: <a href="tel:004520917720" title="Say hi" class="contact--link">+45 20 91 77 20</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen">brianstefanjensen</a></p>
+            <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="link">hej@brianstefan.dk</a></p>
+            <p>Phone: <a href="tel:004520917720" title="Say hi" class="link">+45 20 91 77 20</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen" class="link">brianstefanjensen</a></p>
           </div>
         </aside>
       </div>
@@ -312,18 +349,18 @@
         <aside class="box">
           <h3 class="box--header">Design Systems & Atomic Design</h3>
           <p>I have worked with design systems and Atomic Design for the past years, and are very passionate about this methodology. I believe that design systems can be a great communication asset - and more - for any project.</p>
-          <p>Lately I have worked with <a href="https://fractal.build/" title="Fractal">Fractal</a>, and did some work with <a href="https://patternlab.io/" title="Pattern Lab">Pattern Lab</a> and Drupal.</p>
+          <p>Lately I have worked with <a href="https://fractal.build/" title="Fractal" class="link">Fractal</a>, and did some work with <a href="https://patternlab.io/" title="Pattern Lab" class="link">Pattern Lab</a> and Drupal.</p>
           <p>I wrote a blog post about how we do at Novicell (in danish for now), have a read here:</p>
-          <p><a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Designsystemer: UX og frontend-kode på lager">Designsystemer: UX og frontend-kode på lager</a></p>
+          <p><a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Designsystemer: UX og frontend-kode på lager" class="box-link">Designsystemer: UX og frontend-kode på lager</a></p>
         </aside>
       </div>
       <div class="container">
         <div class="performance-icon"></div>
         <aside class="box-floated">
           <h3 class="box--header">Frontend Performance</h3>
-          <p>Performance is one of the big buzzwords in 2019. And for <a href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html" title="Using page speed in mobile search ranking">good reason</a>. I have performed several performance checks, made performance budgets and setup frontend performance monitoring. If you need some sparring or have a site that needs a performance check drop me a line.</p>
+          <p>Performance is one of the big buzzwords in 2019. And for <a href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html" title="Using page speed in mobile search ranking" class="link">good reason</a>. I have performed several performance checks, made performance budgets and setup frontend performance monitoring. If you need some sparring or have a site that needs a performance check drop me a line.</p>
           <p>I also wrote a blog post on how to perform a quick performance check yourself - check it out!</p>
-          <p><a href="https://www.novicell.co.uk/blog/does-your-website-load-fast-enough" title="Does your website load fast enough?">Does your website load fast enough?</a></p>
+          <p><a href="https://www.novicell.co.uk/blog/does-your-website-load-fast-enough" title="Does your website load fast enough?" class="box-link">Does your website load fast enough?</a></p>
         </aside>
       </div>      
       <div class="container">
@@ -332,17 +369,18 @@
           <h3 class="box--header">PWA, SPA & static sites</h3>
           <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I am following close, and I think that, in the future we will see apps and web melting together.</p>
           <p>I have been involved with SPA and headless solutions for the last couple of years, and dabbled a bit with Vue.js and Nuxt. Along with static sites and services like Netlify it surely is exciting times!<p>
-          <p>Make sure to check <a href="https://www.netlify.com/" title="Netlify">Netlify</a> out!</p>
+          <p>Make sure to check <a href="https://www.netlify.com/" title="Netlify" class="link">Netlify</a> out!</p>
         </aside>
       </div>
       <div class="footer">
         <aside class="box-centered">
           <h3 class="footer--header">Get in touch</h3>
-          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="contact--link">hej@brianstefan.dk</a></p>
-          <p>Phone: <a href="tel:004520917720" title="Say hi" class="contact--link">+45 20 91 77 20</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen">brianstefanjensen</a></p>
+          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="link">hej@brianstefan.dk</a></p>
+          <p>Phone: <a href="tel:004520917720" title="Say hi" class="link">+45 20 91 77 20</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen" class="link">brianstefanjensen</a></p>
         </aside>
       </div>         
+      <p class="credit">Icons by <a href="http://www.glypho.eu/" title="Glypho" class="link" target="_blank">Glypho</a></p>
     </div>
   </section>
 </body>
