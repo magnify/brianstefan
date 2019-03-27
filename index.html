@@ -14,13 +14,12 @@
     }
 
     body {
-      background-image: url('background.png');
-      background-color: #00072B;
-      background-size: 150%;
       background-attachment: fixed;
-      background-position-y: 35%;
-      background-position-x: 25%;
+      background-color: #00072B;
+      background-image: url('background.jpg');
+      background-position: top;
       background-repeat: no-repeat;
+      background-size: cover;
       box-sizing: border-box;
       color: #fff;
       display: flex;
@@ -36,14 +35,6 @@
       flex-direction: column;
       overflow: auto;
       width: 100%;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .main {
-        background-size: 125%;
-        background-position-y: 55%;
-        background-position-x: 30%;
-      }
     }
 
     .content {
@@ -152,13 +143,13 @@
 
       .rocket-icon {
         background: url('assets/rocket.svg') no-repeat;
-        left: -80px;
+        right: -80px;
       }
 
       .container + .container {
         margin-top: 100px;
         min-width: 80vw;
-      }      
+      }
     }
 
     .box,
@@ -250,12 +241,12 @@
       text-align: center;
     }
 
-
     .box-link, .box-link:link, .box-link:visited, .box-link:hover, .box-link:active {
       color: #a8bce7;
+      font-style: italic;
       position: relative;
       text-decoration: none;
-    }    
+    }
 
     @media only screen and (min-width: 700px) {
       .box-link {
@@ -314,7 +305,7 @@
     }
 
     .credit:hover {
-      opacity: .75;  
+      opacity: .75;
     }
   </style>
 </head>
@@ -367,10 +358,19 @@
           <p>I also wrote a blog post on how to perform a quick performance check yourself - check it out!</p>
           <p><a href="https://www.novicell.co.uk/blog/does-your-website-load-fast-enough" title="Does your website load fast enough?" class="box-link">Does your website load fast enough?</a></p>
         </aside>
-      </div>      
+      </div>
+      <div class="container">
+        <aside class="box">
+          <h3 class="box--header">UX Engineer & problem solver</h3>
+          <p>User Experience is in my opinion a discipline that, depending on the task, can require a multitude of skills. The mindset, method and being able to put yourself in your users shoes, is in my opinion the key to success when working with UX.</p>
+          <p>Through the years, that I have been working with the internet, I have aquired lots of different skills. I have designed, wireframed and developed a lot of websites, I have prototyped apps and I was even a SEO expert once.</p>
+          <p>But most of all, I am a problem solver.</p>
+          <p>Today I use my accumulated skills for solving challenges of warying kinds. I put myself in the users shoes, and use whatever tool that is in my toolbox when solving and delivering a good experience.</p>
+        </aside>
+      </div>
       <div class="container">
         <div class="rocket-icon"></div>
-        <aside class="box">
+        <aside class="box-floated">
           <h3 class="box--header">PWA, SPA & static sites</h3>
           <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I follow closely, and I think that in the future, we will see apps and web melting together.</p>
           <p>I have been involved with SPA and headless solutions for the last couple of years and dabbled a bit with Vue.js and Nuxt. Along with static sites and services like Netlify it surely is exciting times!<p>
@@ -384,8 +384,8 @@
           <p>Phone: <a href="tel:004520917720" title="Say hi" class="link">+45 20 91 77 20</a></p>
           <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen" class="link">brianstefanjensen</a></p>
         </aside>
-      </div>         
-      <p class="credit">Icons by <a href="http://www.glypho.eu/" title="Glypho" class="link" target="_blank" rel="noopener">Glypho</a></p>
+      </div>
+      <p class="credit">Icons by <a href="http://www.glypho.eu/" title="Glypho" class="link" target="_blank" rel="noopener">Glypho</a>, Photo by <a href="https://unsplash.com/photos/KFIjzXYg1RM" class="link">Jeremy Bishop</a>.</p>
     </div>
   </section>
 </body>
