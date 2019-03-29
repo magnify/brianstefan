@@ -14,7 +14,13 @@
     }
 
     body {
+      background-image: url('background.png');
       background-color: #00072B;
+      background-size: 150%;
+      background-attachment: fixed;
+      background-position-y: 35%;
+      background-position-x: 25%;
+      background-repeat: no-repeat;
       box-sizing: border-box;
       color: #fff;
       display: flex;
@@ -22,16 +28,12 @@
       min-height: 100%;
       line-height: 1.5;
       margin: 0;
-      overflow: initial;
       position: relative;
     }
 
     .main {
-      background: url('background.png') no-repeat;
-      background-size: 150%;
-      background-position-y: -75%;
-      background-position-x: 25%;
       display: flex;
+      flex-direction: column;
       overflow: auto;
       width: 100%;
     }
@@ -52,7 +54,6 @@
       margin-left: 25px;
       margin-right: 25px;
       min-height: min-content;
-      width: 100%;
     }
 
     @media only screen and (min-width: 1024px) {
@@ -118,16 +119,50 @@
     }
 
     @media only screen and (min-width: 1024px) {
-      .info {
+      .container {
         align-items: stretch;
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        max-width: 1000px;
+        max-width: 1200px;
         min-height: min-content;
+        position: relative;
       }
+
+      .atomic-icon,
+      .performance-icon,
+      .rocket-icon {
+        content: "";
+        height: 400px;
+        opacity: .05;
+        position: absolute;
+        top: -80px;
+        width: 400px;
+      }
+
+      .atomic-icon {
+        background: url('assets/atomic.svg') no-repeat;
+        left: -80px;
+      }
+
+      .performance-icon {
+        background: url('assets/performance.svg') no-repeat;
+        right: -80px;
+      }
+
+      .rocket-icon {
+        background: url('assets/rocket.svg') no-repeat;
+        left: -80px;
+      }
+
+      .container + .container {
+        margin-top: 100px;
+        min-width: 80vw;
+      }      
     }
 
+    .box,
+    .box-floated,
     .about,
     .contact {
       font-size: 18px;
@@ -135,26 +170,49 @@
       text-align: left;
     }
 
+    .box {
+        margin-right: auto;
+    }
+
+    .box-centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box-floated {
+        margin-left: auto;
+    }
+
     @media only screen and (min-width: 1024px) {
+      .box,
+      .box-floated,
+      .box-centered,
       .about,
       .contact {
         font-size: 22px;
+        line-height: 40px;
+        width: calc(50% - 70px);
+      }
+
+      .box,
+      .about,
+      .contact {
         margin-left: 35px;
         margin-right: 35px;
-        width: calc(50% - 70px);
       }
     }
 
-    .info--header {
+    .box--header {
       font-size: 30px;
+      margin-left: -60px;
       padding-left: 120px;
       position: relative;
       text-align: left;
     }
 
-    .info--header:before {
+    .box--header:before {
         background-color: #ffcd21;
-        top: 24px;
+        top: 50%;
         content: "";
         height: 3px;
         left: 0;
@@ -163,14 +221,67 @@
         width: 100px;
     }
 
-    a, a:link, a:visited, a:hover, a:active {
+    .box--inner {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .footer {
+      margin-top: 100px;
+      padding-bottom: 100px;
+      padding-top: 125px;
+      position: relative;
+      text-align: center;
+    }
+
+    .footer:before {
+        background-color: rgba(255, 255, 255, .25);
+        top: 24px;
+        content: "";
+        height: 3px;
+        left: calc(50% - 50px);
+        position: absolute;
+        transition: width .5s;
+        width: 100px;
+    }
+
+    .footer--header {
+      font-size: 30px;
+      text-align: center;
+    }
+
+
+    .box-link, .box-link:link, .box-link:visited, .box-link:hover, .box-link:active {
+      color: #a8bce7;
+      position: relative;
+      text-decoration: none;
+    }    
+
+    @media only screen and (min-width: 700px) {
+      .box-link {
+        margin-left: 90px;
+      }
+
+      .box-link:before {
+          background: 100% url('assets/arrow-right.svg') no-repeat;
+          top: 6px;
+          content: "";
+          height: 18px;
+          left: -90px;
+          opacity: .75;
+          position: absolute;
+          width: 59px;
+      }
+    }
+
+    .link, .link:link, .link:visited, .link:hover, .link:active {
       color: #ffcd21;
       position: relative;
       text-decoration: none;
     }
 
-    a:after {
-        background-color: #ffcd21;
+    .link:after,
+    .box-link:after {
         bottom: -6px;
         content: "";
         height: 2px;
@@ -180,13 +291,30 @@
         width: 35px;
     }
 
-    a:hover {
-      text-decoration: none;
+    .link:after {
+        background-color: #ffcd21;
     }
 
-    a:hover:after,
-    a:focus:after {
+    .box-link:after {
+        background-color: #a8bce7;
+    }
+
+    .link:hover:after,
+    .box-link:hover:after,
+    .box-link:focus:after,
+    .link:focus:after {
       width: 100%;
+    }
+
+    .credit {
+      font-size: 14px;
+      margin-top: 100px;
+      opacity: .25;
+      text-align: center;
+    }
+
+    .credit:hover {
+      opacity: .75;  
     }
   </style>
 </head>
@@ -200,23 +328,64 @@
           Frontend Designer &amp;<br>
           Technical Architect.
         </h1>
-        <p class="lead">Bridging the gap between business, design and development, delivering high quality user experiences.</p>
+        <p class="lead">Bridging the gap between business, design and development, aiming to deliver high quality user experiences.</p>
       </header>
-      <div class="info">
+      <div class="container">
         <aside class="about">
-          <h3 class="info--header">Work</h3>
-          <p>I am a QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online">Novicell</a> in Aarhus.</p>
-          <p>If you need help with your next project, let's get in touch.</p>
-          <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="contact--link">bsj@novicell.dk</a></p>
+          <h3 class="box--header">Work</h3>
+          <div class="box--inner">
+            <p>I am a QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online" class="link">Novicell</a> in Aarhus.</p>
+            <p>If you need help with your next project, let's get in touch.</p>
+            <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="link">bsj@novicell.dk</a></p>
+          </div>
         </aside>
         <aside class="contact">
-          <h3 class="info--header">Contact</h3>
-          <p>Wanna grab a coffee? Feel free to reach out!</p>
-          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="contact--link">hej@brianstefan.dk</a></p>
-          <p>Phone: <a href="tel:004520917720" title="Say hi" class="contact--link">+45 20 91 77 20</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen">brianstefanjensen</a></p>
+          <h3 class="box--header">Contact</h3>
+          <div class="box--inner">
+            <p>Wanna grab a coffee? Feel free to reach out!</p>
+            <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="link">hej@brianstefan.dk</a></p>
+            <p>Phone: <a href="tel:004520917720" title="Say hi" class="link">+45 20 91 77 20</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen" class="link">brianstefanjensen</a></p>
+          </div>
         </aside>
       </div>
+      <div class="container">
+        <div class="atomic-icon"></div>
+        <aside class="box">
+          <h3 class="box--header">Design Systems & Atomic Design</h3>
+          <p>I have worked with design systems and Atomic Design for several years, and I am very passionate about the methodology. I believe that design systems can be a great communication asset - and more - for any project.</p>
+          <p>Lately I have worked with <a href="https://fractal.build/" title="Fractal" class="link">Fractal</a>, and previously did some work with <a href="https://patternlab.io/" title="Pattern Lab" class="link">Pattern Lab</a> and Drupal.</p>
+          <p>I wrote a blog post about how we do it at Novicell (in Danish), follow the link and have a read.</p>
+          <p><a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Designsystemer: UX og frontend-kode på lager" class="box-link">Designsystemer: UX og frontend-kode på lager</a></p>
+        </aside>
+      </div>
+      <div class="container">
+        <div class="performance-icon"></div>
+        <aside class="box-floated">
+          <h3 class="box--header">Frontend Performance</h3>
+          <p>Performance is one of the big buzzwords in 2019. And for <a href="https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html" title="Using page speed in mobile search ranking" class="link">good reason</a>. I have performed several performance checks, made performance budgets and set up frontend performance monitoring. If you need sparring or have a site that needs a performance, check drop me a line.</p>
+          <p>I also wrote a blog post on how to perform a quick performance check yourself - check it out!</p>
+          <p><a href="https://www.novicell.co.uk/blog/does-your-website-load-fast-enough" title="Does your website load fast enough?" class="box-link">Does your website load fast enough?</a></p>
+        </aside>
+      </div>      
+      <div class="container">
+        <div class="rocket-icon"></div>
+        <aside class="box">
+          <h3 class="box--header">PWA, SPA & static sites</h3>
+          <p>The web platform is changing. New frameworks and technologies are emerging everyday. PWAs are a topic I follow closely, and I think that in the future, we will see apps and web melting together.</p>
+          <p>I have been involved with SPA and headless solutions for the last couple of years and dabbled a bit with Vue.js and Nuxt. Along with static sites and services like Netlify it surely is exciting times!<p>
+          <p>Make sure to check <a href="https://www.netlify.com/" title="Netlify" class="link">Netlify</a> out!</p>
+        </aside>
+      </div>
+      <div class="footer">
+        <aside class="box-centered">
+          <h3 class="footer--header">Get in touch</h3>
+          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="link">hej@brianstefan.dk</a></p>
+          <p>Phone: <a href="tel:004520917720" title="Say hi" class="link">+45 20 91 77 20</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen" class="link">brianstefanjensen</a></p>
+        </aside>
+      </div>         
+      <p class="credit">Icons by <a href="http://www.glypho.eu/" title="Glypho" class="link" target="_blank" rel="noopener">Glypho</a></p>
     </div>
   </section>
 </body>
@@ -241,5 +410,6 @@
   ScrollReveal().reveal('.lead', { delay: Math.random() * 500, scale: Math.random() });
   ScrollReveal().reveal('.about', { delay: Math.random() * 750, scale: Math.random() });
   ScrollReveal().reveal('.contact', { delay: Math.random() * 1000, scale: Math.random() });
+  ScrollReveal().reveal('.container', { delay: Math.random() * 1000, scale: Math.random() });
 </script>
 </html>
