@@ -1,245 +1,68 @@
 <!DOCTYPE html>
-<html lang="da-DK">
+<html lang="en">
 <head>
-  <title>UX Engineer / Frontend Designer / Technical Architect - Brian Stefan Jensen!</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description" content="Bridging the gap between business, design and development, delivering high quality solutions.">
-  <link rel="preload" href="/fonts/bitter-v12-latin-regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="/fonts/bitter-v12-latin-700.woff2" as="font" crossorigin>
-  <style type="text/css">
-    html {
-      height: 100%;
-    }
+    <meta charset="utf-8">
+    <title>vue-fullpage.js demo</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="twitter:site" content="@imac2">
+    <meta name="twitter:creator" content="@imac2">
 
-    body {
-      background-color: #00072B;
-      box-sizing: border-box;
-      color: #fff;
-      display: flex;
-      font-family: "Bitter", "Georgia";
-      min-height: 100%;
-      line-height: 1.5;
-      margin: 0;
-      overflow: initial;
-      position: relative;
-    }
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
 
-    .main {
-      background: url('background.png') no-repeat;
-      background-size: 150%;
-      background-position-y: -75%;
-      background-position-x: 25%;
-      display: flex;
-      overflow: auto;
-      width: 100%;
-    }
 
-    @media only screen and (min-width: 1024px) {
-      .main {
-        background-size: 125%;
-        background-position-y: 55%;
-        background-position-x: 30%;
-      }
-    }
+    <style type="text/css">blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul{padding:0;margin:0}a{text-decoration:none}table{border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-weight:400;font-style:normal}strong{font-weight:700}ol,ul{list-style:none;margin:0;padding:0}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;margin:0;padding:0}q:after,q:before{content:''}abbr,acronym{border:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{font-family:arial,helvetica}.section{position:relative}#section-1{text-align:center}#section-1 h2:before{content:'';display:inline-block;height:200px;width:232px;background-image:url(imgs/vue-fullpage2.png);background-repeat:no-repeat;background-size:cover;vertical-align:bottom}#section-1 h2{color:#fff;font-size:10em;font-weight:900}#section-1 h1{font-size:2em;font-weight:100;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;margin:1.5em auto 1em auto;color:#35495e;padding-right:30px;padding-left:30px}#section-1 li{display:inline-block;margin:1.25em .3em}.section-1-button{padding:.93em 1.87em;background:#35495e;border-radius:5px;display:block;color:#fff}h3{font-size:5em;text-align:center;color:#fff;font-weight:700}#logo{position:fixed;top:20px;left:20px;color:#fff;font-weight:700;z-index:99;font-size:1.9em;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}#menu-line{position:absolute;bottom:-4px;left:0;width:159px;height:2px;background:#fff}#menu{position:fixed;top:20px;right:20px;z-index:70;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;letter-spacing:1px;font-size:1.1em}#menu li{display:inline-block;margin:10px 0;position:relative}#menu a{color:#fff;padding:0 1.1em 1.1em 1.1em}#menu li.active a:after{content:'';margin:0 1.1em 0 1.1em;height:2px;background:#fff;display:block;position:absolute;bottom:-6px;left:0;right:0;display:block}.actions{position:fixed;bottom:2%;margin:0 auto;z-index:99;left:0;right:0;text-align:center}.actions li{display:inline-block;margin:.3em .3em}.actions-button{padding:.73em 1.47em;background:rgba(53,73,94,.47);border-radius:5px;display:block;color:#fff}.twitter-share i{vertical-align:middle;position:relative;top:2px;display:inline-block;width:38px;height:14px;color:#fff;top:-4px;left:-2px;fill:#fff}.twitter-share svg{height:40px;margin-top:-10px}</style>
 
-    .content {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      margin-bottom: 50px;
-      margin-left: 25px;
-      margin-right: 25px;
-      min-height: min-content;
-      width: 100%;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .content {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-    }
-
-    .logo {
-      align-self: center;
-      height: 80px;
-      margin-top: 50px;
-      width: 80px;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .logo {
-        align-self: flex-start;
-        height: 100px;
-        margin-top: 50px;
-        width: 100px;
-      }
-    }
-
-    @media only screen and (min-width: 1024px) {
-      header {
-          margin-left: auto;
-          margin-right: auto;
-          width: 1000px;
-      }
-    }
-
-    .headline {
-      font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 0;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .headline {
-        font-size: 50px;
-        margin-top: 10px;
-        margin-left: -35px;
-        margin-right: 35px;
-        width: calc(100% - 70px);
-      }
-    }
-
-    .lead {
-      font-size: 20px;
-      margin-bottom: 0;
-      margin-top: 60px;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .lead {
-        font-size: 30px;
-        margin-left: 35px;
-        margin-right: 35px;
-        width: calc(100% - 70px);
-      }
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .info {
-        align-items: stretch;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1000px;
-        min-height: min-content;
-      }
-    }
-
-    .about,
-    .contact {
-      font-size: 18px;
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      .about,
-      .contact {
-        font-size: 22px;
-        margin-left: 35px;
-        margin-right: 35px;
-        width: calc(50% - 70px);
-      }
-    }
-
-    .info--header {
-      font-size: 30px;
-      padding-left: 120px;
-      position: relative;
-      text-align: left;
-    }
-
-    .info--header:before {
-        background-color: #ffcd21;
-        top: 24px;
-        content: "";
-        height: 3px;
-        left: 0;
-        position: absolute;
-        transition: width .5s;
-        width: 100px;
-    }
-
-    a, a:link, a:visited, a:hover, a:active {
-      color: #ffcd21;
-      position: relative;
-      text-decoration: none;
-    }
-
-    a:after {
-        background-color: #ffcd21;
-        bottom: -6px;
-        content: "";
-        height: 2px;
-        left: 0;
-        position: absolute;
-        transition: width .5s;
-        width: 35px;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-
-    a:hover:after,
-    a:focus:after {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
-  <section class="main js-reveal-container">
-    <div class="content">
-      <img src="logo.svg" alt="Brian Stefan Jensen" class="logo">
-      <header>
-        <h1 class="headline">
-          UX Engineer,<br>
-          Frontend Designer &amp;<br>
-          Technical Architect.
-        </h1>
-        <p class="lead">Bridging the gap between business, design and development, delivering high quality user experiences.</p>
-      </header>
-      <div class="info">
-        <aside class="about">
-          <h3 class="info--header">Work</h3>
-          <p>I am a QA Manager and Technical Architect at <a href="https://novicell.dk" title="Novicell - Forretning Online">Novicell</a> in Aarhus.</p>
-          <p>If you need help with your next project, let's get in touch.</p>
-          <p><a href="mailto:bsj@novicell.dk" title="Say hi" class="contact--link">bsj@novicell.dk</a></p>
-        </aside>
-        <aside class="contact">
-          <h3 class="info--header">Contact</h3>
-          <p>Wanna grab a coffee? Feel free to reach out!</p>
-          <p>Email: <a href="mailto:hej@brianstefan.dk" title="Say hi" class="contact--link">hej@brianstefan.dk</a></p>
-          <p>Phone: <a href="tel:004520917720" title="Say hi" class="contact--link">+45 20 91 77 20</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/brianstefanjensen">brianstefanjensen</a></p>
-        </aside>
-      </div>
-    </div>
-  </section>
+<div id="app">
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">Section 1</a></li>
+        <li data-menuanchor="page2"><a href="#page2">Section 2</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Section 3</a></li>
+    </ul>
+    <ul class="actions">
+        <li>
+            <a class="actions-button" href="#" rel="noopener" @click="addSection">Add section</a>
+        </li>
+        <li>
+            <a class="actions-button" href="#" rel="noopener" @click="removeSection">Remove section</a>
+        </li>
+        <li>
+            <a class="actions-button" href="#" rel="noopener" @click="toggleNavigation">Toggle nav</a>
+        </li>
+        <li>
+            <a class="actions-button" href="#" rel="noopener" @click="toggleScrollbar">Toggle scrollBar</a>
+        </li>
+        <li>
+            <a class="actions-button" href="#" rel="noopener" @click="$refs.fullpage.api.moveSectionDown()">Move down</a>
+        </li>
+    </ul>
+
+    <full-page ref="fullpage" :options="options" id="fullpage" >
+        <div class="section">
+            <h3>Section 1</h3>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h3>Slide 2.1</h3>
+            </div>
+            <div class="slide">
+                <h3>Slide 2.2</h3>
+            </div>
+            <div class="slide">
+                <h3>Slide 2.3</h3>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Section 3</h3>
+        </div>
+    </full-page>
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+<script src="node_modules/vue-fullpage.js/dist/vue-fullpage.js"></script>
+<script src="index.js"></script>
+
 </body>
-<link rel="stylesheet" href="bitter.css" rel="preload" as="style">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-96894412-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<script src="//unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.js"></script>
-<script>
-  ScrollReveal({
-    container: document.getElementsByClassName('js-reveal-container')
-  });
-
-  ScrollReveal().reveal('.logo', { delay: Math.random() * 100, scale: Math.random() });
-  ScrollReveal().reveal('.headline', { delay: Math.random() * 250, scale: Math.random() });
-  ScrollReveal().reveal('.lead', { delay: Math.random() * 500, scale: Math.random() });
-  ScrollReveal().reveal('.about', { delay: Math.random() * 750, scale: Math.random() });
-  ScrollReveal().reveal('.contact', { delay: Math.random() * 1000, scale: Math.random() });
-</script>
 </html>
