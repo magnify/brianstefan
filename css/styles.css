@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 125px;
+  top: 125px;
+  z-index: 99;
+}
+
+.splatter-top-left {
+  position: absolute;
+  left: -500px;
+  top: -100px;
+}
+
+.navigation {
+  position: fixed;
+  right: 125px;
+  top: 125px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  z-index: 99;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+}
+
+.navigation a {
+  color: #000;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation li {
+  padding-bottom: 28px;
+  transition: all 0.2s;
+}
+
+.navigation li.active {
+  background: url("../assets/splatter-single.svg") no-repeat center;
+}
+
+.navigation .active a {
+  font-weight: 700;
+}
