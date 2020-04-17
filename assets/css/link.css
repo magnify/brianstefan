@@ -1,0 +1,37 @@
+.link {
+  display: inline-block;
+}
+
+.link,
+.link:link,
+.link:visited,
+.link:active {
+  color: var(--color-blue);
+  position: relative;
+  text-decoration: none;
+}
+
+.link:after {
+  background-color: #1fbee3;
+  bottom: -1px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .link:after {
+    bottom: -1px;
+    height: 3px;
+  }
+}
+
+.link:hover:after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.2s;
+}

@@ -1,0 +1,161 @@
+.masthead {
+  bottom: 0;
+  height: 85%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.masthead--inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 64px;
+  margin-left: 32px;
+  position: relative;
+}
+
+.masthead--headline {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 0;
+  max-width: 960px;
+  width: 100%;
+}
+
+.masthead--lead {
+  font-size: 14px;
+  line-height: 125%;
+  margin-bottom: 0;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.masthead--lead + .masthead--lead {
+  margin-top: 20px;
+}
+
+.masthead--action {
+  margin-top: 32px;
+  margin-left: auto;
+  width: 55%;
+}
+
+.masthead--image {
+  bottom: -16px;
+  position: absolute;
+  width: 40%;
+}
+
+.masthead--image img {
+  vertical-align: bottom;
+}
+
+.masthead--spatter-left,
+.masthead--spatter-right {
+  position: absolute;
+  z-index: -1;
+}
+
+.masthead--spatter-left {
+  bottom: 20%;
+  left: -50%;
+}
+
+.masthead--spatter-right {
+  top: 20%;
+  right: -50%;
+}
+
+.masthead--spatter-left img,
+.masthead--spatter-right img {
+  width: 400px;
+}
+
+/* For tall handheld devices */
+@media only screen and (min-width: 500px) and (min-height: 800px) and (max-height: 1000px) {
+  .masthead--image {
+    margin-left: -32px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .masthead--spatter-left {
+    left: -10%;
+  }
+
+  .masthead--spatter-right {
+    right: -10%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .masthead {
+    display: flex;
+    width: 100%;
+  }
+
+  .masthead--inner {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+  }
+
+  .masthead--headline,
+  .masthead--lead {
+    margin-left: auto;
+    width: 80%;
+  }
+
+  .masthead--headline {
+    font-size: 50px;
+    line-height: 125%;
+  }
+
+  .masthead--lead {
+    font-size: 28px;
+    line-height: 135%;
+  }
+
+  .masthead--image {
+    width: 20%;
+  }
+
+  .masthead--action {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .masthead {
+    height: 100%;
+  }
+
+  .masthead--inner {
+    max-width: 1200px;
+  }
+
+  .masthead--headline {
+    margin-top: auto;
+  }
+
+  .masthead--image {
+    margin-left: -144px;
+    width: 300px;
+  }
+
+  .masthead--action {
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .masthead--headline {
+    font-size: 72px;
+  }
+
+  .masthead--lead {
+    font-size: 40px;
+  }
+}

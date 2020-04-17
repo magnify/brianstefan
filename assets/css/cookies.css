@@ -1,0 +1,14 @@
+@import "//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css";
+
+.cc-banner,
+.cc-revoke {
+  font-family: "Raleway";
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cc-banner,
+  .cc-revoke {
+    font-size: 14px;
+  }
+}

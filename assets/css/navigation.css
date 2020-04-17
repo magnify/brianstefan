@@ -1,0 +1,62 @@
+.navigation {
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 0;
+  display: flex;
+  height: 56px;
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  width: 100%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .navigation {
+    background-color: transparent;
+    right: 32px;
+    top: 32px;
+    height: 80px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navigation {
+    top: 48px;
+  }
+}
+
+.navigation li {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.navigation a {
+  color: #000;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  margin-left: 16px;
+  margin-right: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation a:hover {
+  font-weight: 700;
+}
+
+.navigation li {
+  transition: all 0.2s;
+}
+
+.navigation .active {
+  background: url("../images/spatter-navigation.svg") no-repeat;
+}
+.navigation .active a {
+  font-weight: 700;
+}

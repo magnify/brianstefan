@@ -1,0 +1,60 @@
+/* Fonts */
+@import "bitter.css";
+@import "raleway.css";
+
+/* Atoms */
+@import "reset.css";
+@import "button.css";
+@import "link.css";
+@import "logo.css";
+@import "strong.css";
+
+/* Molecules */
+@import "navigation.css";
+
+/* Organisms */
+@import "masthead.css";
+@import "page.css";
+
+/* 3rd Party */
+@import "animate.css";
+@import "cookies.css";
+@import "fullpage.css";
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-dark: #707070;
+  --color-gray: #c4c4c4;
+  --color-blue-dark: #368193;
+  --color-blue: #1fbee3;
+  --color-blue-light: #eaf9fc;
+  --color-rose: #f38f9b;
+  --gradient-white: rgba(255, 255, 255, 1);
+  --gradient-blue-light: rgba(210, 237, 247, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bitter", "Georgia";
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
