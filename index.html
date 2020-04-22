@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da-DK">
+<html lang="en-US">
   <head>
     <title>Brian Stefan Jensen - UX, design and more</title>
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
   </head>
 <body>
-
 <div id="app">
   <ul id="navigation" class="navigation fadeInDown animated delay-2s">
     <li data-menuanchor="home" class="active"><a href="#home" title="Home">Home</a></li>
@@ -260,7 +259,20 @@
 const gaID = "UA-96894412-1";
 
 function addAnalytics() {
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  (function(i, s, o, g, r, a, m) {
+  i["GoogleAnalyticsObject"] = r;
+  (i[r] =
+    i[r] ||
+    function() {
+      (i[r].q = i[r].q || []).push(arguments);
+    }),
+    (i[r].l = 1 * new Date());
+  (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+  })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
   ga("create", gaID, "auto");
   ga("send", "pageview");
 }
@@ -277,14 +289,12 @@ window.cookieconsent.initialise({
     }
 
     if (!this.hasConsented()) {
-      window['ga-disable-UA-XXXXX-Y'] = true;
       window["ga-disable-" + gaID] = true;
     }
-
   },
   "palette": {
     "popup": {
-      "background": "#000000",
+      "background": "rgba(0, 0, 0, 0.7)",
       "text": "#ffffff"
     },
     "button": {
@@ -293,14 +303,14 @@ window.cookieconsent.initialise({
       "text": "#f38f9b"
     }
   },
+  "position": "bottom",
   "type": "opt-in",
   "content": {
-    "message": "My website uses cookies for insights into how you use my site, analytics and more. Feel free to opt out if this is not doesn't work for you. :)",
+    "message": "My website uses cookies for insights and statistics on how you use my site. But do feel free to opt-out. :)",
     "link": "Read more"
   }
 });
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
 
 
 </body>

@@ -1,10 +1,14 @@
 @import "//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css";
 
+.cc-revoke {
+  display: none;
+}
+
 .cc-window,
 .cc-banner,
 .cc-revoke {
   font-family: "Raleway";
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .cc-window.cc-floating {
@@ -12,6 +16,10 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .cc-revoke {
+    display: block;
+  }
+
   .cc-window,
   .cc-banner,
   .cc-revoke {
