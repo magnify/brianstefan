@@ -4,6 +4,7 @@ window.pepe = new Vue({
   data: function() {
     return {
       options: {
+        licenseKey: "CCC2F49A-6707493B-8FE375A3-F4886160",
         afterLoad: this.afterLoad,
         afterRender: this.afterRender,
         scrollBar: false,
@@ -23,8 +24,6 @@ window.pepe = new Vue({
       } else {
         $activeSection = 0;
       }
-
-      console.log($activeSection);
 
       // Home
       if ($activeSection === 0) {
