@@ -1,9 +1,8 @@
 .masthead {
-  background-color: var(--color-sky-blue);
   background-image: url("/assets/images/background-family-reversed.svg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: 275%;
   bottom: 0;
   height: 85%;
   overflow: hidden;
