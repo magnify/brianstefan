@@ -1,8 +1,4 @@
 .masthead {
-  background-image: url("/assets/images/background-family-reversed.svg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 275%;
   bottom: 0;
   height: 85%;
   overflow: hidden;
@@ -16,6 +12,7 @@
   margin-right: 64px;
   margin-left: 32px;
   position: relative;
+  z-index: 20;
 }
 
 .masthead--headline {
@@ -49,31 +46,15 @@
   bottom: -16px;
   position: absolute;
   width: 40%;
+  z-index: 10;
 }
 
-.masthead--image img {
-  vertical-align: bottom;
-}
-
-.masthead--spatter-left,
-.masthead--spatter-right {
+.masthead--background {
   position: absolute;
-  z-index: -1;
-}
-
-.masthead--spatter-left {
-  bottom: 20%;
-  left: -50%;
-}
-
-.masthead--spatter-right {
-  top: 20%;
-  right: -50%;
-}
-
-.masthead--spatter-left img,
-.masthead--spatter-right img {
-  width: 400px;
+  right: -30%;
+  bottom: 0;
+  left: -30%;
+  z-index: 1;
 }
 
 /* For tall handheld devices */
@@ -84,19 +65,8 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .masthead--spatter-left {
-    left: -10%;
-  }
-
-  .masthead--spatter-right {
-    right: -10%;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   .masthead {
-    background-size: 100%;
     display: flex;
     width: 100%;
   }
@@ -129,6 +99,11 @@
 
   .masthead--action {
     width: 80%;
+  }
+
+  .masthead--background {
+    right: 0;
+    left: 0;
   }
 }
 

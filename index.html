@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="da-DK">
   <head>
@@ -26,8 +29,7 @@
     <li data-menuanchor="work"><a href="#work" title="Work">Work</a></li>
     <li data-menuanchor="about"><a href="#about" title="About">About</a></li>
     <li data-menuanchor="contact"><a href="#contact" title="Contact">Contact</a></li>
-  </ul>
-  <div class="logo fadeInDown animated delay-2s">
+  </ul>  <div class="logo fadeInDown animated delay-2s">
     <a href="#home" title="Brian Stefan Jensen - Home">
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 60 52.857">
         <path id="b-path" data-name="b-path" d="M21.328-74.025H29.25q7.621,0,12.11,3.246t4.489,9.662q0,9.476-9.054,12.311,10.79,3.059,10.79,11.938,0,15.445-19.618,15.445H9.914l-.055-43.8L4.2-67.459v-6.193ZM25.7-44.7H21.328v14.549H27.59a8.927,8.927,0,0,0,6-1.791,6.162,6.162,0,0,0,2.075-4.924q0-4.029-2.414-5.932T25.7-44.7ZM21.328-65.221v12.684H25.7q8.451,0,8.451-6.939a5.227,5.227,0,0,0-1.773-4.29,7.082,7.082,0,0,0-4.64-1.455Z" transform="translate(-4.2 74.025)" />
@@ -37,7 +39,7 @@
   </div>
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section section--home">
-      <section class="masthead">
+      <section class="masthead" id="masthead">
         <div class="masthead--inner">
           <h1 class="masthead--headline" id="masthead-headline">
             Hi I'm Brian,<br />
@@ -53,13 +55,8 @@
           <div class="masthead--action" id="masthead-action">
             <a href="#work" class="button--primary button--down">What I do</a>    </div>
         </div>
-        <div class="masthead--background">
-          <div class="masthead--spatter-left">
-            <img src="/assets/images/spatter-loose.svg" alt="" />
-          </div>
-          <div class="masthead--spatter-right">
-            <img src="/assets/images/spatter-loose.svg" alt="" />
-          </div>
+        <div class="masthead--background" id="masthead-background">
+          <img src="/assets/images/background-family-reversed.svg" alt="" />
         </div>
       </section>
     </div>
