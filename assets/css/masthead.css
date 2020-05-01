@@ -138,4 +138,8 @@
   .masthead--lead {
     font-size: 40px;
   }
+
+  .masthead--background {
+    bottom: -10%;
+  }
 }

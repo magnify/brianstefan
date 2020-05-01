@@ -45,7 +45,7 @@
   left: -64px;
   bottom: -64px;
   position: absolute;
-  width: 90%;
+  width: 95%;
 }
 
 .page--image img {
@@ -114,6 +114,7 @@
     padding-left: 0;
     padding-right: 0;
     max-width: 1000px;
+    z-index: 20;
   }
 
   .page--headline,
@@ -139,6 +140,14 @@
 
   .page--figure {
     width: 20%;
+  }
+
+  .page--background {
+    position: absolute;
+    right: 0;
+    bottom: 70%;
+    left: 0;
+    z-index: 1;
   }
 }
 

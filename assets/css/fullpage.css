@@ -1,4 +1,5 @@
-.section--home {
+.section--home,
+.section--work {
   background-color: var(--color-sky-blue);
 }
 
