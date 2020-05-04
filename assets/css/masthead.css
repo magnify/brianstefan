@@ -16,16 +16,16 @@
 }
 
 .masthead--headline {
-  font-size: 4vh;
+  font-size: 3.5vmax;
   font-weight: 600;
-  line-height: 4.5vh;
+  line-height: 4vmax;
   margin-bottom: 0;
   width: 100%;
 }
 
 .masthead--lead {
-  font-size: 2vh;
-  line-height: 2.5vh;
+  font-size: 2vmax;
+  line-height: 2.5vmax;
   margin-bottom: 0;
   margin-top: 24px;
   width: 100%;
@@ -78,6 +78,8 @@
   }
 
   .masthead--headline {
+    font-size: 3vmax;
+    line-height: 3.75vmax;
     margin-top: auto;
   }
 
@@ -87,8 +89,14 @@
     width: 80%;
   }
 
+  .masthead--lead {
+    font-size: 1.5vmax;
+    line-height: 2vmax;
+  }
+
   .masthead--image {
-    width: 20%;
+    margin-left: -50px;
+    width: 175px;
   }
 
   .masthead--action {
@@ -113,16 +121,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .masthead--headline {
-    font-size: 5.5vh;
-    line-height: 6.5vh;
-  }
-
-  .masthead--lead {
-    font-size: 2.75vh;
-    line-height: 3.75vh;
-  }
-
   .masthead--image {
     margin-left: -72px;
     width: 250px;

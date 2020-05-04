@@ -16,17 +16,17 @@
 }
 
 .page--headline {
-  font-size: 4vh;
+  font-size: 2.75vmax;
   font-weight: 600;
-  line-height: 4.5vh;
+  line-height: 3.25vmax;
   margin-bottom: 0;
   width: 100%;
   z-index: 20;
 }
 
 .page--lead {
-  font-size: 2vh;
-  line-height: 2.5vh;
+  font-size: 2vmax;
+  line-height: 2vmax;
   margin-bottom: 0;
   margin-top: 24px;
   width: 100%;
@@ -34,12 +34,18 @@
 }
 
 .page--lead + .page--lead {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
-.page--action {
+.page--action,
+.page--action-float {
   margin-top: 32px;
   z-index: 20;
+}
+
+.page--action-float {
+  margin-left: auto;
+  width: 55%;
 }
 
 .page--image {
@@ -87,7 +93,14 @@
   }
 
   .page--headline {
+    font-size: 2.75vmax;
+    line-height: 3.5vmax;
     margin-top: auto;
+  }
+
+  .page--lead {
+    font-size: 1.5vmax;
+    line-height: 2vmax;
   }
 
   .page--image {
@@ -97,6 +110,11 @@
 
   .page--action {
     margin-bottom: auto;
+  }
+
+  .page--action-float {
+    margin-bottom: auto;
+    width: 80%;
   }
 
   .page--figure {
@@ -115,14 +133,7 @@
   }
 
   .page--headline {
-    font-size: 5vh;
-    line-height: 6vh;
     margin-top: auto;
-  }
-
-  .page--lead {
-    font-size: 2vh;
-    line-height: 2.75vh;
   }
 
   .page--image {
