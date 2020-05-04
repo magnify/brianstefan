@@ -16,16 +16,16 @@
 }
 
 .masthead--headline {
-  font-size: 32px;
+  font-size: 4vh;
   font-weight: 600;
-  line-height: 110%;
+  line-height: 4.5vh;
   margin-bottom: 0;
   width: 100%;
 }
 
 .masthead--lead {
-  font-size: 14px;
-  line-height: 125%;
+  font-size: 2vh;
+  line-height: 2.5vh;
   margin-bottom: 0;
   margin-top: 24px;
   width: 100%;
@@ -67,6 +67,7 @@
 @media only screen and (min-width: 1024px) {
   .masthead {
     display: flex;
+    height: 100%;
     width: 100%;
   }
 
@@ -102,22 +103,8 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .masthead {
-    height: 100%;
-  }
-
   .masthead--inner {
     width: 1000px;
-  }
-
-  .masthead--headline {
-    font-size: 40px;
-    line-height: 125%;
-  }
-
-  .masthead--lead {
-    font-size: 24px;
-    line-height: 125%;
   }
 
   .masthead--image {
@@ -127,13 +114,13 @@
 
 @media only screen and (min-width: 1440px) {
   .masthead--headline {
-    font-size: 50px;
-    line-height: 125%;
+    font-size: 5.5vh;
+    line-height: 6.5vh;
   }
 
   .masthead--lead {
-    font-size: 28px;
-    line-height: 135%;
+    font-size: 2.75vh;
+    line-height: 3.75vh;
   }
 
   .masthead--image {
@@ -156,14 +143,6 @@
 @media only screen and (min-width: 2000px) {
   .masthead--inner {
     width: 1400px;
-  }
-
-  .masthead--headline {
-    font-size: 72px;
-  }
-
-  .masthead--lead {
-    font-size: 40px;
   }
 
   .masthead--image {

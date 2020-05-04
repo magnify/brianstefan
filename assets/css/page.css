@@ -16,9 +16,9 @@
 }
 
 .page--headline {
-  font-size: 32px;
+  font-size: 4vh;
   font-weight: 600;
-  line-height: 110%;
+  line-height: 4.5vh;
   margin-bottom: 0;
   max-width: 960px;
   width: 100%;
@@ -26,8 +26,8 @@
 }
 
 .page--lead {
-  font-size: 14px;
-  line-height: 125%;
+  font-size: 2vh;
+  line-height: 2.5vh;
   margin-bottom: 0;
   margin-top: 24px;
   width: 100%;
@@ -116,7 +116,14 @@
   }
 
   .page--headline {
+    font-size: 5vh;
+    line-height: 6vh;
     margin-top: auto;
+  }
+
+  .page--lead {
+    font-size: 2vh;
+    line-height: 2.75vh;
   }
 
   .page--image {
@@ -136,14 +143,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .page--headline {
-    font-size: 40px;
-  }
-
-  .page--lead {
-    font-size: 20px;
-  }
-
   .page--image {
     margin-left: -375px;
     width: 600px;
@@ -159,14 +158,6 @@
   .page--inner {
     margin-left: auto;
     width: 1200px;
-  }
-
-  .page--headline {
-    font-size: 56px;
-  }
-
-  .page--lead {
-    font-size: 24px;
   }
 
   .page--image {
@@ -185,11 +176,18 @@
 }
 
 @media only screen and (min-width: 2000px) {
-  .page--headline {
-    font-size: 56px;
+  .page--inner {
+    width: 1400px;
   }
 
-  .page--lead {
-    font-size: 24px;
+  .page--image {
+    margin-bottom: -200px;
+    margin-left: -900px;
+    width: 1100px;
+  }
+
+  .page--figure {
+    margin-left: -175px;
+    width: 350px;
   }
 }
