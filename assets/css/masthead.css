@@ -20,7 +20,6 @@
   font-weight: 600;
   line-height: 110%;
   margin-bottom: 0;
-  max-width: 960px;
   width: 100%;
 }
 
@@ -74,7 +73,11 @@
   .masthead--inner {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1000px;
+    width: 750px;
+  }
+
+  .masthead--headline {
+    margin-top: auto;
   }
 
   .masthead--headline,
@@ -83,21 +86,12 @@
     width: 80%;
   }
 
-  .masthead--headline {
-    font-size: 50px;
-    line-height: 125%;
-  }
-
-  .masthead--lead {
-    font-size: 28px;
-    line-height: 135%;
-  }
-
   .masthead--image {
     width: 20%;
   }
 
   .masthead--action {
+    margin-bottom: auto;
     width: 80%;
   }
 
@@ -113,24 +107,57 @@
   }
 
   .masthead--inner {
-    max-width: 1200px;
+    width: 1000px;
   }
 
   .masthead--headline {
-    margin-top: auto;
+    font-size: 40px;
+    line-height: 125%;
+  }
+
+  .masthead--lead {
+    font-size: 24px;
+    line-height: 125%;
   }
 
   .masthead--image {
-    margin-left: -144px;
-    width: 300px;
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .masthead--headline {
+    font-size: 50px;
+    line-height: 125%;
   }
 
-  .masthead--action {
-    margin-bottom: auto;
+  .masthead--lead {
+    font-size: 28px;
+    line-height: 135%;
+  }
+
+  .masthead--image {
+    margin-left: -72px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .masthead--inner {
+    width: 1200px;
+  }
+
+  .masthead--image {
+    margin-left: -125px;
+    width: 300px;
   }
 }
 
 @media only screen and (min-width: 2000px) {
+  .masthead--inner {
+    width: 1400px;
+  }
+
   .masthead--headline {
     font-size: 72px;
   }
@@ -139,7 +166,8 @@
     font-size: 40px;
   }
 
-  .masthead--background {
-    bottom: -10%;
+  .masthead--image {
+    margin-left: -175px;
+    width: 350px;
   }
 }
