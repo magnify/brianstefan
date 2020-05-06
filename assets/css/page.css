@@ -185,7 +185,7 @@
   }
 }
 
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 1920px) {
   .page--inner {
     width: 1400px;
   }

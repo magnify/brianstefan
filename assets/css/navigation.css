@@ -55,8 +55,8 @@
 }
 
 .navigation .active {
-  background: url("../images/spatter-navigation.svg") no-repeat;
 }
+
 .navigation .active a {
   font-weight: 700;
 }
