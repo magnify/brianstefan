@@ -26,6 +26,13 @@
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .navigation {
+    top: 88px;
+    right: 80px;
+  }
+}
+
 .navigation li {
   margin-right: auto;
   margin-left: auto;
@@ -52,9 +59,6 @@
 
 .navigation li {
   transition: all 0.2s;
-}
-
-.navigation .active {
 }
 
 .navigation .active a {

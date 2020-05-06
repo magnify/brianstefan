@@ -1,6 +1,19 @@
-.section--home,
-.section--work {
-  background-color: var(--color-sky-blue);
+.section {
+  animation: background-pulse 10s linear infinite;
+}
+
+@keyframes background-pulse {
+  0% {
+    background-color: var(--color-sky-blue);
+  }
+
+  50% {
+    background-color: var(--color-blue-light);
+  }
+
+  100% {
+    background-color: var(--color-sky-blue);
+  }
 }
 
 .slide {
