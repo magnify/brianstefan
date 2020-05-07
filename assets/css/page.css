@@ -65,7 +65,7 @@
 }
 
 .page--clouds {
-  animation: page-clouds 60s linear infinite;
+  animation: page-clouds 90s linear infinite;
   animation-delay: 1s;
   bottom: 35%;
   height: 0;
@@ -82,8 +82,13 @@
   0% {
     margin-left: 0;
   }
-  100% {
+
+  50% {
     margin-left: -1000px;
+  }
+
+  100% {
+    margin-left: 0;
   }
 }
 

@@ -62,3 +62,7 @@ table {
 img {
   vertical-align: bottom;
 }
+
+em {
+  font-style: italic;
+}
