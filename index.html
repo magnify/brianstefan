@@ -21,7 +21,7 @@
   </head>
 <body>
 <div id="app">
-  <ul id="navigation" class="navigation fadeInDown animated delay-1s">
+  <ul id="navigation" class="navigation fadeInDown animated delay-500ms">
     <li data-menuanchor="home" class="active"><a href="#home" title="Home">Home</a></li>
     <li data-menuanchor="work"><a href="#work" title="Work">Work</a></li>
     <li data-menuanchor="about"><a href="#about" title="About">About</a></li>
@@ -36,44 +36,44 @@
   </div>
   <full-page ref="fullpage" :options="options" id="fullpage">
     <div class="section section--home">
-      <section class="masthead" id="masthead">
+      <section class="masthead">
         <div class="masthead--inner">
-          <h1 class="masthead--headline" id="masthead-headline">
+          <h1 class="masthead--headline animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">
             Hi I'm Brian,<br>
             I work with the internet.
           </h1>
           <div class="masthead--content">
-            <p class="masthead--lead" id="masthead-lead-first">I am a frontend and UX Designer, now Head of Design at the Aarhus based agency No Zebra. I like creating online experiences and making design and development play nice together.</p>
-            <p class="masthead--lead" id="masthead-lead-second">When I am not working, I live with my wife and daughter, our cat and a lot of geckos in Mårslet south of Aarhus.</p>
+            <p class="masthead--lead animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">I am a frontend and UX Designer from Denmark, now Head of Design at the Aarhus based agency No Zebra. I create digital experiences while making design and code play nice.</p>
+            <p class="masthead--lead animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">Apart from my work, I spend my time with our cat, geckos and my wife and daughter in a small town south of Aarhus.</p>
           </div>
-          <div class="masthead--image" id="masthead-image">
+          <div class="masthead--image animated" data-animate-in="fadeInLeftBig" data-animate-out="fadeOutLeftBig" data-animate-delay="delay-2s">
             <img src="/assets/images/brian-laptop-cropped.svg" alt="" />
           </div>
-          <div class="masthead--action" id="masthead-action">
-            <a href="#work" class="button--primary button--down">What I do</a>    </div>
+          <div class="masthead--action animated" data-animate-in="fadeInUp" data-animate-out="fadeOutUp" data-animate-delay="delay-2s">
+            <a href="#work" class="button--primary button--down">Problem solver</a>    </div>
         </div>
-        <div class="masthead--clouds" id="masthead-clouds">
+        <div class="masthead--clouds">
           <img src="/assets/images/clouds.svg" alt="" />
         </div>
-        <div class="family-background" id="masthead-background">
+        <div class="family-background animated" data-animate-in="fadeInUp" data-animate-delay="delay-2s">
           <img src="/assets/images/background-family-reversed.svg" alt="" />
         </div>
       </section>
     </div>
     <div class="section section--work">
       <div class="slide">
-        <section class="page">
+        <section class="page page--work">
           <div class="page--inner">
-        <h2 class="page--headline" id="page-headline">
-            User experience & problem solver
-        </h2>
-        <div class="page--content">
-            <p class="page--lead">I love watching ideas come to life. I use my favorite tools to create user journeys, wireframing, flows and prototyping. I am a fan of <strong>getting stuff done</strong> and involving users in the process.</p>
-            <p class="page--lead">I have worked with almost every step of the website process, since I started designing over twenty years ago. Today, I am <strong>Head of Design</strong> at the Aarhus based web company <a href="https://www.nozebra.dk" title="No Zebra"  class="link--external" target="_blank">No Zebra</a> and spend my days moving the <strong>UX &amp; Design</strong> department forward.</p>
+        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            User centered visual concepts
+        </h1>
+        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            <p class="page--lead">I am a problem solver at heart and at my best when visualising concepts, prototyping and creating user journeys and flows. I believe in a practical and user centered approach to my work &ndash; early alignment is key.</p>
+            <p class="page--lead">Since I started designing over twenty years ago, I have worked with almost every step of the website process. Today, I am <strong>Head of Design</strong> at the Aarhus based agency <a href="https://www.nozebra.dk" title="No Zebra"  class="link--external" target="_blank">No Zebra</a> and spend my days moving the <strong>UX &amp; Design</strong> department forward and drinking a great deal of coffee.</p>
         </div>
-        <div class="page--action" id="page-action">
+        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
             <a href="#about" class="button--primary button--down">About me</a>    <a href="#work/1" class="button--secondary button--right">Head of Design</a></div>
-        <div class="page--image" id="page-image">
+        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
             <img src="/assets/images/square-app.svg" alt="" />
         </div>
 
@@ -83,57 +83,59 @@
           <img src="/assets/images/clouds.svg" alt="" />
         </div>      </div>
       <div class="slide">
-        <section class="page">
+        <section class="page ">
           <div class="page--inner">
-        <h2 class="page--headline" id="page-headline">
-            Head of Design
-        </h2>
-        <div class="page--content">
-            <p class="page--lead">Some years ago of was hired as a webdesigner for the City of Aarhus. The team expanded and I ended up being team lead. After seven years, it was time to move on and I got the opportuniy in the architecture department at Novicell.</p>
-            <p class="page--lead">Something about being QA Manager and getting back to architecture with a UX focus. THe Head of position became available and I took on the challenge.</p>
-            <p class="page--lead">As head of I am tasked with helping our clients with their online business and being a part of the management while moving the department forward. A lot of my focus is on making design and development work closely together ... design systems.</p>
+        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            Design for conversions
+        </h1>
+        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            <p class="page--lead">As Head of Design I work with our clients to create digital experiences that convert. Stable solutions that we continuously improve and optimise are essential.</p>
+            <p class="page--lead">At No Zebra, UX & Design is part of the project from the get-go. We collaborate closely with Digital Marketing and Development to make user friendly experiences that convert.</p>
+            <p class="page--lead">Design systems are part of that process.</p>
         </div>
-        <div class="page--action" id="page-action">
+        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
             <a href="#work" class="button--secondary button--left">Back</a>    <a href="#work/2" class="button--primary button--right">Design Systems</a></div>
-        <div class="page--image" id="page-image">
+        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+            <img src="/assets/images/no-zebra.png" alt="" />
         </div>
 
           </div>
         </section>
       </div>
       <div class="slide">
-        <section class="page">
+        <section class="page ">
           <div class="page--inner">
-        <h2 class="page--headline" id="page-headline">
-            Bringing order to chaos with design systems
-        </h2>
-        <div class="page--content">
-            <p class="page--lead">I have worked with design systems and Atomic Design for several years, and I'm very passionate about the methodology. Lately I have been using with Fractal, in fact, this site was made using that: <a href="https://ds.brianstefan.dk" title="brianstefan.dk made using Fractal"  class="link--external" target="_blank">ds.brianstefan.dk</a></p>
-            <p class="page--lead">I wrote a <a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Read my blog post about design systems"  class="link--external" target="_blank">blog post</a> (in Danish) a while back, about how we did it, while I was at Novicell.</p>
-            <p class="page--lead">Apart from being a collection of guides, standards and reusable components, a design system is also a great tool for collaboration and communication. Furthermore it can help creating better user experiences, testing and more. <a href="#contact" title="Ask me about design systems!"  class="link">Ask me about design systems!</a></p>
+        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            All your ducks in a row: design systems
+        </h1>
+        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            <p class="page--lead">If our professional paths have crossed at some point in the past years, you know about my passion for design systems and Atomic Design. Fractal has been one of my tools lately, and the one I used to <em>make this site:</em> <a href="https://ds.brianstefan.dk" title="brianstefan.dk made using Fractal"  class="link--external" target="_blank">ds.brianstefan.dk</a></p>
+            <p class="page--lead">While I was at Novicell, I wrote a <a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Read my blog post about design systems"  class="link--external" target="_blank">blog post</a> (in Danish) about how we worked with Atomic Design and Fractal.</p>
+            <p class="page--lead">Apart from being a collection of guides, standards and reusable components, a design system is also a great tool for collaboration and communication. Furthermore it can help create better user experiences, testing and more. <a href="#contact" title="Let&#x27;s talk about design systems!"  class="link">Let&#x27;s talk about design systems!</a></p>
         </div>
-        <div class="page--action" id="page-action">
-            <a href="#work" class="button--secondary button--left">Back</a>    <a href="#work/3" class="button--primary button--right">User Experience</a></div>
-        <div class="page--image" id="page-image">
+        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+            <a href="#work/1" class="button--secondary button--left">Back</a>    <a href="#work/3" class="button--primary button--right">User Experience</a></div>
+        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+            <img src="/assets/images/design-systems.png" alt="" />
         </div>
 
           </div>
         </section>
       </div>
       <div class="slide">
-        <section class="page">
+        <section class="page ">
           <div class="page--inner">
-        <h2 class="page--headline" id="page-headline">
-            User Experience
-        </h2>
-        <div class="page--content">
-            <p class="page--lead">So you want to buy some UX? Great! UX is a big place and takes a lot of different skills and competencies to archieve.</p>
-            <p class="page--lead">When asked about UX, I often refer to the <a href="https://thomas-sokolowski.com/the-user-experience-wheel/" title="The User Experience Wheel"  class="link--external" target="_blank">The User Experience Wheel</a>, trying to zoom in on <em>the problem</em> and why, what and how we are gonna get there. My UX profile is a kinda jack-of-all-trades, as I have a pretty broad experience but also means a lot of gaps. The point here being; consider whoich parts of UX you need  </p>
-            <p class="page--lead">Need a UX review of your app or website? Advice or just want to chat?</p>
+        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            UX Jack of All Trades
+        </h1>
+        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+            <p class="page--lead">So you want to buy some UX? It's a vast landscape and requires a lot of different skills, hard work and patience.</p>
+            <p class="page--lead">When asked about UX, I often refer to the <a href="https://userexperienceproject.blogspot.com/2007/04/user-experience-wheel.html" title="The User Experience Wheel"  class="link--external" target="_blank">The User Experience Wheel</a>, trying to zoom in on <em>what</em> and <em>why</em> we want to reach a certain goal. I am a UX Jack of All Trades with a broad knowledge and the ability to bring the individual skills together &ndash; I can help with asking the right questions and decide <em>how</em> to go about it.</p>
+            <p class="page--lead">Need a UX review of your app or website or advice? <a href="#contact" title="Let&#x27;s talk UX"  class="link">Let&#x27;s talk UX</a>!</p>
         </div>
-        <div class="page--action" id="page-action">
+        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
             <a href="#work/2" class="button--secondary button--left">Back</a>    <a href="#contact" class="button--primary button--down">Let&#x27;s talk UX</a></div>
-        <div class="page--image" id="page-image">
+        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
         </div>
 
           </div>
@@ -141,44 +143,46 @@
       </div>
     </div>
     <div class="section section--about">
-      <section class="page">
+      <section class="page page--about">
         <div class="page--inner">
-      <h2 class="page--headline" id="page-headline">
+      <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
           Internet and wildlife enthusiast
-      </h2>
-      <div class="page--content">
-          <p class="page--lead">Did you dream of becoming one thing, but ended up doing something completely different? I didn’t. Well sorta. I did once think I was gonna be a skateboarder but getting my first computer at age 13 had me hooked. Later I got my first reptile which made me want to become a zookeeper. The zookeeper part didn't pan out, but the facination with the digital world ended up becoming my work.</p>
-          <p class="page--lead">Today I still spend a great deal of my time on wildlife and gecko keeping, while designing and coding a bit as well.</p>
+      </h1>
+      <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+          <p class="page--lead">Did you dream of becoming one thing, but ended up doing something completely different? I dreamt of becoming a pro skateboarder, but luckily,
+            buying my first computer at 13 sparked my interest in the digital world. From then on, I stuck to computers and reptiles,
+            and when my plan to become a zookeeper didn't pan out, I made my other big passion my career</p>
+          <p class="page--lead">.</p>
       </div>
-      <div class="page--action" id="page-action">
+      <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
           <a href="#contact" class="button--primary button--down">Contact</a></div>
-      <div class="page--figure" id="page-figure">
+      <div class="page--figure animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
           <img src="/assets/images/brian-plumbus-cropped.svg" alt="" />
       </div>
         </div>
       </section>
       <div class="page--clouds">
         <img src="/assets/images/clouds.svg" alt="" />
-      </div><div class="family-background" id="">
+      </div><div class="family-background animated" data-animate-in="fadeInUp" data-animate-delay="delay-2s">
         <img src="/assets/images/background-family-reversed.svg" alt="" />
       </div>
     </div>
     <div class="section section--contact">
-      <section class="page">
+      <section class="page page--contact">
         <div class="page--inner">
-      <h2 class="page--headline" id="page-headline">
+      <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
           Wanna grab a cup of coffee?
-      </h2>
-      <div class="page--content">
+      </h1>
+      <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
           <p class="page--lead">... and talk about design systems, UX, Geckos, Rick &amp; Morty or something else?<br></p>
           <p class="page--lead"><strong>Email:</strong> <a href="mailto:hej@brianstefan.dk" title="Say hi"  class="link">hej@brianstefan.dk</a></p>
           <p class="page--lead"><strong>Phone:</strong> <a href="tel:004520917720" title="Say hi"  class="link">+45 20 91 77 20</a></p>
           <p class="page--lead"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brianstefanjensen" title="brianstefanjensen @ LinkedIn"  class="link">brianstefanjensen</a><br></p>
           <p class="page--lead">Wanna work together or connect? Add me on LinkedIn!</p>
       </div>
-      <div class="page--action-float" id="page-action-float">
+      <div class="page--action-float animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
           <a href="https://linkedin.com/in/brianstefanjensen" class="button--primary button--right">LinkedIn</a></div>
-      <div class="page--figure" id="page-figure">
+      <div class="page--figure animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
           <img src="/assets/images/brian-coffee-cropped.svg" alt="" />
       </div>
         </div>
