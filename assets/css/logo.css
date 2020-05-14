@@ -1,0 +1,29 @@
+.logo {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  z-index: 99;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    left: 32px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    left: 48px;
+    top: 48px;
+    width: 52px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo {
+    left: 80px;
+    top: 80px;
+    width: 60px;
+  }
+}

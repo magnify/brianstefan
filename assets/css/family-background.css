@@ -1,0 +1,14 @@
+.family-background {
+  position: absolute;
+  right: -30%;
+  bottom: 0;
+  left: -30%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .family-background {
+    right: 0;
+    left: 0;
+  }
+}

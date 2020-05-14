@@ -1,0 +1,78 @@
+.link,
+.link--external {
+  display: inline-block;
+}
+
+.link,
+.link--external,
+.link:link,
+.link--external:link,
+.link:visited,
+.link--external:visited,
+.link:active,
+.link--external:active {
+  color: var(--color-blue);
+  position: relative;
+  text-decoration: none;
+}
+
+.link:hover,
+.link--external:hover {
+  color: var(--color-rose);
+}
+
+.link:before,
+.link--external:before {
+  background-color: #1fbee3;
+  bottom: -1px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  width: 100%;
+}
+
+.link:hover:before,
+.link--external:hover:before {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.2s;
+}
+
+.link--external {
+  margin-right: 16px;
+}
+
+.link--external:after {
+  background-image: url("/assets/images/arrow-right-blue.svg");
+  background-position: right -0px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  content: "";
+  height: 16px;
+  right: -16px;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 16px;
+}
+
+.link--external:hover:after {
+  background-image: url("/assets/images/arrow-right-rose.svg");
+}
+
+@media only screen and (min-width: 1024px) {
+  .link:before,
+  .link--external:before {
+    bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .link:before,
+  .link--external:before {
+    bottom: -2px;
+    height: 3px;
+  }
+}

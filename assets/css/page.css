@@ -1,0 +1,237 @@
+.page {
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.page--inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 32px;
+  margin-right: 64px;
+  margin-left: 32px;
+  position: relative;
+  z-index: 20;
+}
+
+.page--headline {
+  font-size: 3.5vmax;
+  font-weight: 600;
+  line-height: 3.75vmax;
+  margin-bottom: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.page--lead {
+  font-size: 1.75vmax;
+  line-height: 2.5vmax;
+  margin-bottom: 0;
+  margin-top: 24px;
+  width: 100%;
+  z-index: 20;
+}
+
+.page--lead + .page--lead {
+  margin-top: 16px;
+}
+
+.page--action,
+.page--action-float {
+  margin-top: 32px;
+  z-index: 20;
+}
+
+.page--action-float {
+  margin-left: auto;
+  width: 55%;
+}
+
+.page--image {
+  left: -150px;
+  bottom: -200px;
+  position: absolute;
+  width: 500px;
+  z-index: 10;
+}
+
+.page--figure {
+  bottom: 0;
+  position: absolute;
+  width: 125px;
+}
+
+.page--clouds {
+  animation: page-clouds 90s linear infinite;
+  animation-delay: 1s;
+  bottom: 35%;
+  height: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.page--clouds img {
+  width: 1000px;
+}
+
+@keyframes page-clouds {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: -1000px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .page {
+    display: flex;
+    width: 100%;
+  }
+
+  .page--inner {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 750px;
+  }
+
+  .page--headline,
+  .page--lead,
+  .page--action {
+    margin-left: auto;
+    width: 80%;
+  }
+
+  .page--headline {
+    font-size: 2.75vmax;
+    line-height: 3.5vmax;
+    margin-top: auto;
+  }
+
+  .page--lead {
+    font-size: 1.25vmax;
+    line-height: 2vmax;
+  }
+
+  .page--lead + .page--lead {
+    margin-top: 24px;
+  }
+
+  .page--image {
+    margin-left: -225px;
+    width: 400px;
+  }
+
+  .page--action {
+    margin-bottom: auto;
+  }
+
+  .page--action-float {
+    margin-bottom: auto;
+    width: 80%;
+  }
+
+  .page--figure {
+    margin-left: -50px;
+    width: 150px;
+  }
+
+  .page--clouds {
+    bottom: 45%;
+  }
+
+  .page--clouds img {
+    width: 3000px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .page {
+    height: 100%;
+  }
+
+  .page--inner {
+    width: 960px;
+  }
+
+  .page--headline {
+    margin-top: auto;
+  }
+
+  .page--image {
+    margin-left: -275px;
+    width: 500px;
+  }
+
+  .page--figure {
+    margin-left: -75px;
+    width: 225px;
+  }
+
+  .page--action {
+    margin-top: 48px;
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .page--image {
+    margin-left: -375px;
+    width: 600px;
+  }
+
+  .page--figure {
+    margin-left: -125px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .page--inner {
+    margin-left: auto;
+    width: 1200px;
+  }
+
+  .page--image {
+    margin-left: -425px;
+    width: 700px;
+  }
+
+  .page--figure {
+    margin-left: -125px;
+    width: 300px;
+  }
+
+  .page--action {
+    margin-top: 56px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .page--inner {
+    width: 1400px;
+  }
+
+  .page--image {
+    margin-bottom: -200px;
+    margin-left: -900px;
+    width: 1100px;
+  }
+
+  .page--figure {
+    margin-left: -175px;
+    width: 350px;
+  }
+}
