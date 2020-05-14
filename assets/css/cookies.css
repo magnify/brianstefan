@@ -1,28 +1,29 @@
 @import "//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css";
 
-.cc-revoke {
+/* Added .fp-enabled for specificity and fixing css getting bundled */
+.fp-enabled .cc-revoke {
   display: none;
 }
 
-.cc-window,
-.cc-banner,
-.cc-revoke {
+.fp-enabled .cc-window,
+.fp-enabled .cc-banner,
+.fp-enabled .cc-revoke {
   font-family: "Raleway";
   font-size: 10px;
 }
 
-.cc-window.cc-floating {
+.fp-enabled .cc-window.cc-floating {
   padding: 1em;
 }
 
 @media only screen and (min-width: 1024px) {
-  .cc-revoke {
+  .fp-enabled .cc-revoke {
     display: block;
   }
 
-  .cc-window,
-  .cc-banner,
-  .cc-revoke {
+  .fp-enabled .cc-window,
+  .fp-enabled .cc-banner,
+  .fp-enabled .cc-revoke {
     font-size: 14px;
   }
 }
