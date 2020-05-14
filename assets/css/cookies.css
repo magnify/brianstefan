@@ -312,7 +312,7 @@
 
 /* Added .fp-enabled for specificity and fixing css getting bundled */
 .fp-enabled .cc-revoke {
-  display: none;
+  display: none !important;
 }
 
 .fp-enabled .cc-window,
