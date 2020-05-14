@@ -14,6 +14,7 @@
     <link rel="preload" href="/assets/fonts/raleway-v14-latin-regular.woff2" as="font" crossorigin>
     <link rel="preload" href="/assets/fonts/raleway-v14-latin-bold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="//unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="//unpkg.com/aos@next/dist/aos.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -21,12 +22,12 @@
   </head>
 <body>
 <div id="app">
-  <ul id="navigation" class="navigation fadeInDown animated delay-500ms">
+  <ul id="navigation" class="navigation">
     <li data-menuanchor="home" class="active"><a href="#home" title="Home">Home</a></li>
     <li data-menuanchor="work"><a href="#work" title="Work">Work</a></li>
     <li data-menuanchor="about"><a href="#about" title="About">About</a></li>
     <li data-menuanchor="contact"><a href="#contact" title="Contact">Contact</a></li>
-  </ul>  <div class="logo fadeInDown animated delay-1s">
+  </ul>  <div class="logo" data-aos="fade-down" data-aos-delay="500">
     <a href="#home" title="Brian Stefan Jensen - Home">
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 60 52.857">
         <path id="b-path" data-name="b-path" d="M21.328-74.025H29.25q7.621,0,12.11,3.246t4.489,9.662q0,9.476-9.054,12.311,10.79,3.059,10.79,11.938,0,15.445-19.618,15.445H9.914l-.055-43.8L4.2-67.459v-6.193ZM25.7-44.7H21.328v14.549H27.59a8.927,8.927,0,0,0,6-1.791,6.162,6.162,0,0,0,2.075-4.924q0-4.029-2.414-5.932T25.7-44.7ZM21.328-65.221v12.684H25.7q8.451,0,8.451-6.939a5.227,5.227,0,0,0-1.773-4.29,7.082,7.082,0,0,0-4.64-1.455Z" transform="translate(-4.2 74.025)" />
@@ -38,24 +39,24 @@
     <div class="section section--home">
       <section class="masthead">
         <div class="masthead--inner">
-          <h1 class="masthead--headline animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">
+          <h1 class="masthead--headline" data-aos="fade-down" data-aos-duration="1000">
             Hi I'm Brian,<br>
             I work with the internet.
           </h1>
           <div class="masthead--content">
-            <p class="masthead--lead animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">I am a frontend and UX Designer from Denmark, now Head of Design at the Aarhus based agency No Zebra. I create digital experiences while making design and code play nice.</p>
-            <p class="masthead--lead animated" data-animate-in="fadeInDown" data-animate-out="fadeOutUp" data-animate-delay="delay-1s">Apart from my work, I spend my time with our cat, geckos and my wife and daughter in a small town south of Aarhus.</p>
+            <p class="masthead--lead" data-aos="fade-down" data-aos-duration="1000">I am a frontend and UX Designer from Denmark, now Head of Design at the Aarhus based agency No Zebra. I create digital experiences while making design and code play nice.</p>
+            <p class="masthead--lead" data-aos="fade-down" data-aos-duration="1000">Apart from my work, I spend my time with our cat, geckos and my wife and daughter in a small town south of Aarhus.</p>
           </div>
-          <div class="masthead--image animated" data-animate-in="fadeInLeftBig" data-animate-out="fadeOutLeftBig" data-animate-delay="delay-2s">
+          <div class="masthead--image" data-aos="fade-up" data-aos-duration="1000">
             <img src="/assets/images/brian-laptop-cropped.svg" alt="" />
           </div>
-          <div class="masthead--action animated" data-animate-in="fadeInUp" data-animate-out="fadeOutUp" data-animate-delay="delay-2s">
-            <a href="#work" class="button--primary button--down">Problem solver</a>    </div>
+          <div class="masthead--action" data-aos="fade-down" data-aos-duration="1000">
+            <a href="#work" class="button--primary button--down">How I work</a>    </div>
         </div>
         <div class="masthead--clouds">
           <img src="/assets/images/clouds.svg" alt="" />
         </div>
-        <div class="family-background animated" data-animate-in="fadeInUp" data-animate-delay="delay-2s">
+        <div class="family-background" data-aos="" data-aos-duration="">
           <img src="/assets/images/background-family-reversed.svg" alt="" />
         </div>
       </section>
@@ -64,16 +65,16 @@
       <div class="slide">
         <section class="page page--work">
           <div class="page--inner">
-        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <h1 class="page--headline" data-aos="fade-down" data-aos-duration="1000">
             User centered visual concepts
         </h1>
-        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <div class="page--content" data-aos="fade-down" data-aos-duration="1000">
             <p class="page--lead">I am a problem solver at heart and at my best when visualising concepts, prototyping and creating user journeys and flows. I believe in a practical and user centered approach to my work &ndash; early alignment is key.</p>
             <p class="page--lead">Since I started designing over twenty years ago, I have worked with almost every step of the website process. Today, I am <strong>Head of Design</strong> at the Aarhus based agency <a href="https://www.nozebra.dk" title="No Zebra"  class="link--external" target="_blank">No Zebra</a> and spend my days moving the <strong>UX &amp; Design</strong> department forward and drinking a great deal of coffee.</p>
         </div>
-        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+        <div class="page--action" data-aos="fade-down" data-aos-duration="1000">
             <a href="#about" class="button--primary button--down">About me</a>    <a href="#work/1" class="button--secondary button--right">Head of Design</a></div>
-        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+        <div class="page--image" data-aos="fade-up" data-aos-duration="1000">
             <img src="/assets/images/square-app.svg" alt="" />
         </div>
 
@@ -85,17 +86,17 @@
       <div class="slide">
         <section class="page ">
           <div class="page--inner">
-        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <h1 class="page--headline" data-aos="fade-down" data-aos-duration="1000">
             Design for conversions
         </h1>
-        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <div class="page--content" data-aos="fade-down" data-aos-duration="1000">
             <p class="page--lead">As Head of Design I work with our clients to create digital experiences that convert. Stable solutions that we continuously improve and optimise are essential.</p>
-            <p class="page--lead">At No Zebra, UX &amp; Design is part of the project from the get-go. We collaborate closely with Digital Marketing and Development to make user friendly experiences that convert.</p>
+            <p class="page--lead">At No Zebra, UX &amp; Design is part of the project from the get-go. We collaborate closely with Digital Marketing and Development to make user friendly solutions.</p>
             <p class="page--lead">Design systems are part of that process.</p>
         </div>
-        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+        <div class="page--action" data-aos="fade-down" data-aos-duration="1000">
             <a href="#work" class="button--secondary button--left">Back</a>    <a href="#work/2" class="button--primary button--right">Design Systems</a></div>
-        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+        <div class="page--image" data-aos="fade-up" data-aos-duration="1000">
             <img src="/assets/images/no-zebra.png" alt="" />
         </div>
 
@@ -105,17 +106,17 @@
       <div class="slide">
         <section class="page ">
           <div class="page--inner">
-        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <h1 class="page--headline" data-aos="fade-down" data-aos-duration="1000">
             All your ducks in a row: design systems
         </h1>
-        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <div class="page--content" data-aos="fade-down" data-aos-duration="1000">
             <p class="page--lead">If our professional paths have crossed at some point in the past years, you know about my passion for design systems and Atomic Design. Fractal has been one of my tools lately, and the one I used to <em>make this site:</em> <a href="https://ds.brianstefan.dk" title="brianstefan.dk made using Fractal"  class="link--external" target="_blank">ds.brianstefan.dk</a></p>
             <p class="page--lead">While I was at Novicell, I wrote a <a href="https://www.novicell.dk/blog/designsystemer-ux-og-frontend-kode-paa-lager/" title="Read my blog post about design systems"  class="link--external" target="_blank">blog post</a> (in Danish) about how we worked with Atomic Design and Fractal.</p>
             <p class="page--lead">Apart from being a collection of guides, standards and reusable components, a design system is also a great tool for collaboration and communication. Furthermore it can help create better user experiences, testing and more. <a href="#contact" title="Let&#x27;s talk about design systems!"  class="link">Let&#x27;s talk about design systems!</a></p>
         </div>
-        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+        <div class="page--action" data-aos="fade-down" data-aos-duration="1000">
             <a href="#work/1" class="button--secondary button--left">Back</a>    <a href="#work/3" class="button--primary button--right">User Experience</a></div>
-        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+        <div class="page--image" data-aos="fade-up" data-aos-duration="1000">
             <img src="/assets/images/design-systems.png" alt="" />
         </div>
 
@@ -125,19 +126,16 @@
       <div class="slide">
         <section class="page ">
           <div class="page--inner">
-        <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <h1 class="page--headline" data-aos="fade-down" data-aos-duration="1000">
             UX Jack of All Trades
         </h1>
-        <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+        <div class="page--content" data-aos="fade-down" data-aos-duration="1000">
             <p class="page--lead">So you want to buy some UX? It's a vast landscape and requires a lot of different skills, hard work and patience.</p>
             <p class="page--lead">When asked about UX, I often refer to the <a href="https://userexperienceproject.blogspot.com/2007/04/user-experience-wheel.html" title="The User Experience Wheel"  class="link--external" target="_blank">The User Experience Wheel</a>, trying to zoom in on <em>what</em> and <em>why</em> we want to reach a certain goal. I am a UX Jack of All Trades with a broad knowledge and the ability to bring the individual skills together &ndash; I can help with asking the right questions and decide <em>how</em> to go about it.</p>
             <p class="page--lead">Need a UX review of your app or website or advice? <a href="#contact" title="Let&#x27;s talk UX"  class="link">Let&#x27;s talk UX</a>!</p>
         </div>
-        <div class="page--action animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+        <div class="page--action" data-aos="fade-down" data-aos-duration="1000">
             <a href="#work/2" class="button--secondary button--left">Back</a>    <a href="#contact" class="button--primary button--down">Let&#x27;s talk UX</a></div>
-        <div class="page--image animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
-        </div>
-
           </div>
         </section>
       </div>
@@ -145,42 +143,42 @@
     <div class="section section--about">
       <section class="page page--about">
         <div class="page--inner">
-      <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+      <h1 class="page--headline" data-aos="fade-down" data-aos-duration="1000">
           Internet and wildlife enthusiast
       </h1>
-      <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+      <div class="page--content" data-aos="fade-down" data-aos-duration="1000">
           <p class="page--lead">Did you dream of becoming one thing, but ended up doing something completely different? I didn't. I bought my first computer at thirteen and my first lizard a couple of years after. Becoming a zookeeper didn’t pan out, but I made my other big passion &ndash; working with the internet &ndash; my work.</p>
           <p class="page--lead">Today I still spend a great deal of my time on the web and on wildlife &ndash; if you want to buy a gecko let me know! :)</p>
       </div>
-      <div class="page--action-float animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+      <div class="page--action-float" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="bottom" data-aos-offset="">
           <a href="#contact" class="button--primary button--down">Contact</a></div>
-      <div class="page--figure animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+      <div class="page--figure" data-aos="fade-up" data-aos-duration="1000">
           <img src="/assets/images/brian-plumbus-cropped.svg" alt="" />
       </div>
         </div>
       </section>
       <div class="page--clouds">
         <img src="/assets/images/clouds.svg" alt="" />
-      </div><div class="family-background animated" data-animate-in="fadeInUp" data-animate-delay="delay-2s">
+      </div><div class="family-background" data-aos="" data-aos-duration="">
         <img src="/assets/images/background-family-reversed.svg" alt="" />
       </div>
     </div>
     <div class="section section--contact">
       <section class="page page--contact">
         <div class="page--inner">
-      <h1 class="page--headline animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+      <h1 class="page--headline" data-aos="fade-up" data-aos-duration="1000">
           Wanna grab a cup of coffee?
       </h1>
-      <div class="page--content animated" data-animate-in="fadeIn" data-animate-delay="delay-500ms">
+      <div class="page--content" data-aos="fade-up" data-aos-duration="1000">
           <p class="page--lead">... and talk about design systems, UX, Geckos, Rick &amp; Morty or something else?<br></p>
           <p class="page--lead"><strong>Email:</strong> <a href="mailto:hej@brianstefan.dk" title="Say hi"  class="link">hej@brianstefan.dk</a></p>
           <p class="page--lead"><strong>Phone:</strong> <a href="tel:004520917720" title="Say hi"  class="link">+45 20 91 77 20</a></p>
           <p class="page--lead"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brianstefanjensen" title="brianstefanjensen @ LinkedIn"  class="link">brianstefanjensen</a><br></p>
           <p class="page--lead">Wanna work together or connect? Add me on LinkedIn!</p>
       </div>
-      <div class="page--action-float animated" data-animate-in="fadeInUp" data-animate-delay="delay-3s">
+      <div class="page--action-float" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom" data-aos-offset="">
           <a href="https://linkedin.com/in/brianstefanjensen" class="button--primary button--right">LinkedIn</a></div>
-      <div class="page--figure animated" data-animate-in="fadeInLeftBig" data-animate-delay="delay-1s">
+      <div class="page--figure" data-aos="fade-up" data-aos-duration="1000">
           <img src="/assets/images/brian-coffee-cropped.svg" alt="" />
       </div>
         </div>
@@ -246,6 +244,12 @@ window.cookieconsent.initialise({
     "link": "Read more"
   }
 });
+</script>
+
+
+<script src="//unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>

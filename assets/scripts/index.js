@@ -5,9 +5,12 @@ window.pepe = new Vue({
     return {
       options: {
         licenseKey: "CCC2F49A-6707493B-8FE375A3-F4886160",
+        onLeave: this.onLeave,
+        onSlideLeave: this.onSlideLeave,
+        afterSlideLoad: this.afterSlideLoad,
         afterLoad: this.afterLoad,
-        afterRender: this.afterRender,
         scrollBar: false,
+        fadingEffect: true,
         menu: "#navigation",
         navigation: true,
         slidesNavPosition: "top",
@@ -17,79 +20,40 @@ window.pepe = new Vue({
     };
   },
   methods: {
+    onLeave: function() {
+      var itemsLeave = document.querySelectorAll(".section [data-aos]");
+
+      if (itemsLeave.length != 0) {
+        itemsLeave.forEach(function(item, i) {
+          item.classList.remove("aos-animate");
+        });
+      }
+    },
     afterLoad: function() {
-      if (this.$refs.fullpage.api != undefined) {
-        activeSection = this.$refs.fullpage.api.getActiveSection().index;
-        activeSlide = this.$refs.fullpage.api.getActiveSlide();
-      } else {
-        activeSection = 0;
-        activeSlide = 0;
+      var itemsAfterLoad = document.querySelectorAll(".section.active [data-aos]");
+
+      if (itemsAfterLoad.length != 0) {
+        itemsAfterLoad.forEach(function(item, i) {
+          item.classList.add("aos-animate");
+        });
       }
+    },
+    onSlideLeave: function() {
+      var itemsSlideLeave = document.querySelectorAll(".slide [data-aos]");
 
-      switch (activeSection) {
-        case 0:
-          document.title = "Brian Stefan Jensen - Frontend and UX Designer, Head of Design at No Zebra";
-
-          var items = document.querySelectorAll(".masthead .animated");
-
-          if (items.length != 0) {
-            items.forEach(function(item, i) {
-              item.classList.add(items[i].getAttribute("data-animate-in"));
-              item.classList.add(items[i].getAttribute("data-animate-delay"));
-            });
-          }
-
-          break;
-        case 1:
-          document.title = "Head of Design at No Zebra - Brian Stefan Jensen";
-
-          var items = document.querySelectorAll(".page--work .animated");
-
-          if (items.length != 0) {
-            items.forEach(function(item, i) {
-              item.classList.add(items[i].getAttribute("data-animate-in"));
-              item.classList.add(items[i].getAttribute("data-animate-delay"));
-            });
-          }
-
-          break;
-        case 2:
-          document.title = "Internet and wildlife enthusiast - Brian Stefan Jensen";
-
-          var items = document.querySelectorAll(".page--about .animated");
-
-          if (items.length != 0) {
-            items.forEach(function(item, i) {
-              item.classList.add(items[i].getAttribute("data-animate-in"));
-              item.classList.add(items[i].getAttribute("data-animate-delay"));
-            });
-          }
-
-          break;
-        case 3:
-          document.title = "Contact - Brian Stefan Jensen";
-
-          var items = document.querySelectorAll(".page--contact .animated");
-
-          if (items.length != 0) {
-            items.forEach(function(item, i) {
-              item.classList.add(items[i].getAttribute("data-animate-in"));
-              item.classList.add(items[i].getAttribute("data-animate-delay"));
-            });
-          }
-
-          break;
+      if (itemsSlideLeave.length != 0) {
+        itemsSlideLeave.forEach(function(item, i) {
+          item.classList.remove("aos-animate");
+        });
       }
+    },
+    afterSlideLoad: function() {
+      var itemsSlideLoad = document.querySelectorAll(".slide.active [data-aos]");
 
-      if (activeSlide) {
-        var items = document.querySelectorAll(".page .animated");
-
-        if (items.length != 0) {
-          items.forEach(function(item, i) {
-            item.classList.add(items[i].getAttribute("data-animate-in"));
-            item.classList.add(items[i].getAttribute("data-animate-delay"));
-          });
-        }
+      if (itemsSlideLoad.length != 0) {
+        itemsSlideLoad.forEach(function(item, i) {
+          item.classList.add("aos-animate");
+        });
       }
     }
   }
