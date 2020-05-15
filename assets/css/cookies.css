@@ -1,7 +1,7 @@
 @import "//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css";
 
 .cc-revoke {
-  display: none;
+  display: none !important;
 }
 
 .cc-window,
