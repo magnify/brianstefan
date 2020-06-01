@@ -44,7 +44,7 @@ window.pepe = new Vue({
           document.title = "Head of Design at No Zebra - Brian Stefan Jensen";
           break;
         case 2:
-          document.title = "Tech and reptiles - Brian Stefan Jensen";
+          document.title = "Familiy life, web and reptiles - Brian Stefan Jensen";
           break;
         case 3:
           document.title = "Contact - Brian Stefan Jensen";
