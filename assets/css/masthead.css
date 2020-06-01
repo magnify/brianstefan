@@ -50,16 +50,15 @@
 }
 
 .masthead--clouds {
-  animation: masthead--clouds 90s linear infinite;
-  animation-delay: 5s;
   bottom: 35%;
-  height: 0;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
 
 .masthead--clouds img {
+  animation: masthead--clouds 90s linear infinite;
+  animation-delay: 5s;
   width: 1000px;
 }
 

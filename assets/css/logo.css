@@ -3,7 +3,7 @@
   right: 32px;
   top: 32px;
   width: 32px;
-  z-index: 99;
+  z-index: 90;
 }
 
 @media only screen and (min-width: 600px) {

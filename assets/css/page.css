@@ -65,16 +65,15 @@
 }
 
 .page--clouds {
-  animation: page-clouds 90s linear infinite;
-  animation-delay: 1s;
   bottom: 35%;
-  height: 0;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
 
 .page--clouds img {
+  animation: page-clouds 90s linear infinite;
+  animation-delay: 1s;
   width: 1000px;
 }
 
