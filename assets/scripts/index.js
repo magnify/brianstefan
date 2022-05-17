@@ -38,10 +38,10 @@ window.pepe = new Vue({
 
       switch (activeSection) {
         case 0:
-          document.title = "Frontend and UX Designer, Head of Design at No Zebra - Brian Stefan Jensen";
+          document.title = "Product Designer - Brian Stefan Jensen";
           break;
         case 1:
-          document.title = "Head of Design at No Zebra - Brian Stefan Jensen";
+          document.title = "Product Designer -  Brian Stefan Jensen";
           break;
         case 2:
           document.title = "Familiy life, web and reptiles - Brian Stefan Jensen";
